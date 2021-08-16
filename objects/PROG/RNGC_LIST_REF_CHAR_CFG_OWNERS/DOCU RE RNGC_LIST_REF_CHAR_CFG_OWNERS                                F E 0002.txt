@@ -1,0 +1,38 @@
+U1 &PURPOSE&                                                               
+AS Dans les options du Customizing de la classification, les objets de nœud
+   et terminal peuvent être définis d'après un type de classe. s'agissant  
+   d'un objet terminal (par exemple une variante d'un produit d'un article 
+   configurable), l'enregistrement redondant des valeurs de caractéristique
+   de référence de l'objet de nœud correspondant par exemple l'article     
+   configurable) a pour effet de restreindre l'ensemble de valeurs         
+   autorisées de l'objet terminal aux valeurs définies dans l'objet de     
+   nœud.                                                                   
+AS Par exemple, vous classifiez un article au moyen d'un type de classe    
+   configurable (300) et vous appliquez une restriction uniquement à une   
+   valeur autorisée pour une caractéristique. Dès lors, si cet article est 
+   utilisé dans la configuration, cela aura pour effet de définir cette    
+   valeur automatiquement. La valeur ne pourra être ni modifiée ni         
+   supprimée par l'utilisateur. Il s'agit du comportement standard.        
+AS Avec l'enregistrement redondant, ce type de restriction s'applique      
+   automatiquement pour toutes les caractéristiques d'objet faisant        
+   référence à la table de base de données MARA ou MAKT et affectées à la  
+   classe utilisée.                                                        
+AS Ce programme présente une liste des propriétaires de configuration pour 
+   les valeurs de caractéristiques objet faisant référence à la table de   
+   base de données MARA ou MAKT.                                           
+U1 &INTEGRATION&                                                           
+AS                                                                         
+U1 &PREREQUISITES&                                                         
+AS                                                                         
+U1 &FEATURES&                                                              
+AS                                                                         
+U2 &SELECTION&                                                             
+AS                                                                         
+U2 &STANDARD_VARIANTS&                                                     
+AS                                                                         
+U2 &OUTPUT&                                                                
+AS                                                                         
+U1 &ACTIVITIES&                                                            
+AS                                                                         
+U1 &EXAMPLE&                                                               
+AS                                                                         

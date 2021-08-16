@@ -1,0 +1,17 @@
+interface IF_NGC_CHR_API_READ
+  public .
+
+
+  methods READ_BY_EXT_KEY
+    importing
+      !IT_CHARACTERISTIC_KEY type NGCT_CHARACTERISTIC_KEY_EXT
+    exporting
+      !ET_CHARACTERISTIC type NGCT_CHARACTERISTIC_OBJECT
+      !EO_CHR_API_RESULT type ref to IF_NGC_CHR_API_RESULT .
+  methods READ
+    importing
+      !IT_CHARACTERISTIC_KEY type NGCT_CHARACTERISTIC_KEY
+    exporting
+      !ET_CHARACTERISTIC type NGCT_CHARACTERISTIC_OBJECT
+      !EO_CHR_API_RESULT type ref to IF_NGC_CHR_API_RESULT .
+endinterface.

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?><asx:abap xmlns:asx="http://www.sap.com/abapxml">
+<asx:values>
+<ACMDCLSRC>
+<ACMDCLSRC>
+<DCLNAME>N_CLFNOBJECTCLASSFORKEYDATE</DCLNAME>
+<AS4LOCAL>A</AS4LOCAL>
+<AS4USER>SAP</AS4USER>
+<AS4DATE>2019-05-28</AS4DATE>
+<AS4TIME>12:10:38</AS4TIME>
+<SOURCE>@EndUserText.label: 'Mapping Role for N_ClfnObjectClassForKeyDate'
+@MappingRole: true
+define role N_ClfnObjectClassForKeyDate{
+  grant select on N_ClfnObjectClassForKeyDate
+    // ClassType authorization    
+      where ( ClassType ) =  aspect pfcg_auth ( C_TCLA_BKA, KLART )   
+    // Class authorization
+      and (  ( _Class.ClassMaintAuthGrp =  '' and                          ( ) = aspect pfcg_auth ( C_KLAH_BKP, ACTVT = '03' ) )          //display                                                           
+        or   ( _Class.ClassMaintAuthGrp &lt;&gt; '' and ( _Class.ClassMaintAuthGrp ) = aspect pfcg_auth ( C_KLAH_BKP, BGRKP, ACTVT = '03' ) ) ) //display                  
+    // Classification authorization
+      and ( ( _Class.ClassClassfctnAuthGrp =  '' and                               ( ) =  aspect pfcg_auth (  C_KLAH_BKL, ACTVT = '03' ) )          //display                                                           
+        or  ( _Class.ClassClassfctnAuthGrp &lt;&gt; '' and  ( _Class.ClassClassfctnAuthGrp ) =  aspect pfcg_auth (  C_KLAH_BKL, BGRKL, ACTVT = '03' ) ) ) //display     
+    ;                                         
+}
+</SOURCE>
+<PARENTNAME></PARENTNAME>
+<ABAP_LANGUAGE_VERSION></ABAP_LANGUAGE_VERSION>
+</ACMDCLSRC>
+</ACMDCLSRC>
+<ACMDCLSRCT>
+<ACMDCLSRCT>
+<DCLNAME>N_CLFNOBJECTCLASSFORKEYDATE</DCLNAME>
+<DCLLANGUAGE>E</DCLLANGUAGE>
+<AS4LOCAL>A</AS4LOCAL>
+<DDTEXT>Mapping Role for N_ClfnObjectClassForKeyDate</DDTEXT>
+</ACMDCLSRCT>
+</ACMDCLSRCT>
+<TADIR>
+<TADIR>
+<PGMID>R3TR</PGMID>
+<OBJECT>DCLS</OBJECT>
+<OBJ_NAME>N_CLFNOBJECTCLASSFORKEYDATE</OBJ_NAME>
+<KORRNUM></KORRNUM>
+<SRCSYSTEM>SAP</SRCSYSTEM>
+<AUTHOR>SAP</AUTHOR>
+<SRCDEP></SRCDEP>
+<DEVCLASS>NGC_CORE_VDM</DEVCLASS>
+<GENFLAG></GENFLAG>
+<EDTFLAG></EDTFLAG>
+<CPROJECT> S</CPROJECT>
+<MASTERLANG>E</MASTERLANG>
+<VERSID>0.0</VERSID>
+<PAKNOCHECK></PAKNOCHECK>
+<OBJSTABLTY></OBJSTABLTY>
+<COMPONENT>S4CORE</COMPONENT>
+<CRELEASE>104</CRELEASE>
+<DELFLAG></DELFLAG>
+<TRANSLTTXT></TRANSLTTXT>
+<CREATED_ON>2019-05-28</CREATED_ON>
+<CHECK_DATE>2019-05-28</CHECK_DATE>
+<CHECK_CFG></CHECK_CFG>
+</TADIR>
+</TADIR>
+</asx:values>
+</asx:abap>

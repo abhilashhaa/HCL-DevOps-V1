@@ -1,0 +1,23 @@
+class CL_NGC_CLF_UTIL_INTERSECT definition
+  public
+  final
+  create public .
+
+public section.
+
+  methods GET_CHARC_AND_DOM_VALS
+    importing
+      !IV_CLASSTYPE type KLASSENART
+      !IV_CHARCINTERNALID type ATINN
+      !IS_CLASSIFICATION_KEY type NGCS_CLASSIFICATION_KEY
+      !IT_CLASSES type NGCT_CLASS_OBJECT
+    exporting
+      !ES_CHARACTERISTIC_HEADER type NGCS_CHARACTERISTIC
+      !ET_DOMAIN_VALUES type NGCT_CHARACTERISTIC_VALUE
+      !ET_CHARACTERISTIC_REF type NGCT_CHARACTERISTIC_REF
+      !EO_CLF_API_RESULT type ref to IF_NGC_CLF_API_RESULT .
+  methods RECALCULATE
+    importing
+      !IV_CLASSTYPE type KLASSENART .
+  methods RECALCULATE_ALL .
+  methods CONSTRUCTOR .

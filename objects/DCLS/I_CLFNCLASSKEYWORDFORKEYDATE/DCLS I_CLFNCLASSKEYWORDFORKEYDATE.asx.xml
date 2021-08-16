@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?><asx:abap xmlns:asx="http://www.sap.com/abapxml">
+<asx:values>
+<ACMDCLSRC>
+<ACMDCLSRC>
+<DCLNAME>I_CLFNCLASSKEYWORDFORKEYDATE</DCLNAME>
+<AS4LOCAL>A</AS4LOCAL>
+<AS4USER>SAP</AS4USER>
+<AS4DATE>2018-12-15</AS4DATE>
+<AS4TIME>15:15:13</AS4TIME>
+<SOURCE>@EndUserText.label: 'Mapping role for I_ClfnClassKeywordForKeyDate' 
+@MappingRole: true 
+define role I_ClfnClassKeywordForKeyDate { 
+  grant select on I_ClfnClassKeywordForKeyDate
+    // ClassType authorization
+      where ( _Class( P_KeyDate : $parameters.P_KeyDate ).ClassType ) =  aspect pfcg_auth (  C_TCLA_BKA, KLART )            
+    // Class authorization
+      and ( (  _Class( P_KeyDate : $parameters.P_KeyDate ).ClassMaintAuthGrp = '' and 
+            ( ) =  aspect pfcg_auth (  C_KLAH_BKP, ACTVT = '03' ) )  //display                                                           
+        or 
+            ( _Class( P_KeyDate : $parameters.P_KeyDate ).ClassMaintAuthGrp &lt;&gt; '' and  
+            ( _Class( P_KeyDate : $parameters.P_KeyDate ).ClassMaintAuthGrp ) =  aspect pfcg_auth (  C_KLAH_BKP, BGRKP, ACTVT = '03' ) )  //display   
+    );      
+}</SOURCE>
+<PARENTNAME></PARENTNAME>
+<ABAP_LANGUAGE_VERSION></ABAP_LANGUAGE_VERSION>
+</ACMDCLSRC>
+</ACMDCLSRC>
+<ACMDCLSRCT>
+<ACMDCLSRCT>
+<DCLNAME>I_CLFNCLASSKEYWORDFORKEYDATE</DCLNAME>
+<DCLLANGUAGE>E</DCLLANGUAGE>
+<AS4LOCAL>A</AS4LOCAL>
+<DDTEXT>Mapping role for I_ClfnClassKeywordForKeyDate</DDTEXT>
+</ACMDCLSRCT>
+</ACMDCLSRCT>
+<TADIR>
+<TADIR>
+<PGMID>R3TR</PGMID>
+<OBJECT>DCLS</OBJECT>
+<OBJ_NAME>I_CLFNCLASSKEYWORDFORKEYDATE</OBJ_NAME>
+<KORRNUM></KORRNUM>
+<SRCSYSTEM>SAP</SRCSYSTEM>
+<AUTHOR>SAP</AUTHOR>
+<SRCDEP></SRCDEP>
+<DEVCLASS>NGC_CORE_VDM</DEVCLASS>
+<GENFLAG></GENFLAG>
+<EDTFLAG></EDTFLAG>
+<CPROJECT> S</CPROJECT>
+<MASTERLANG>E</MASTERLANG>
+<VERSID>0.0</VERSID>
+<PAKNOCHECK></PAKNOCHECK>
+<OBJSTABLTY></OBJSTABLTY>
+<COMPONENT>S4CORE</COMPONENT>
+<CRELEASE>104</CRELEASE>
+<DELFLAG></DELFLAG>
+<TRANSLTTXT></TRANSLTTXT>
+<CREATED_ON>2018-12-15</CREATED_ON>
+<CHECK_DATE>2018-12-15</CHECK_DATE>
+<CHECK_CFG></CHECK_CFG>
+</TADIR>
+</TADIR>
+</asx:values>
+</asx:abap>

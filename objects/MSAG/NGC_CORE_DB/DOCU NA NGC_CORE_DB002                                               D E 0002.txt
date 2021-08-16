@@ -1,0 +1,16 @@
+U1 &CAUSE&                                                                 
+AS Es liegt mindestens ein Business-Objekt mit einer Fremdsperre vor.      
+   Details hierzu finden Sie im vollständigen Protokoll des Konverti       
+=  erungsreports (RNGC_CONV_REF_CHAR), in dem die IDs der gesperrten       
+   Business-Objekte durch Warnmeldungen gekennzeichnet sind.               
+U1 &SYSTEM_RESPONSE&                                                       
+AS Die Referenzmerkmalswerte der betreffenden Business-Objekte können nicht
+   in Tabelle AUSP kopiert werden und werden aus diesem Grund übersprungen.
+U1 &WHAT_TO_DO&                                                            
+AS Falls es nicht erforderlich ist, die Referenzmerkmalswerte dieser       
+   Business-Objekte in AUSP zu kopieren, sind keine weiteren Schritte      
+   notwendig. Anderenfalls entsperren Sie die Business-Objekte (da andere  
+   Anwendungen sie derzeit sperren), und führen Sie die Umsetzung erneut   
+   aus.                                                                    
+U1 &SYS_ADMIN&                                                             
+AS                                                                         

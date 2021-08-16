@@ -1,0 +1,9 @@
+U1 &CAUSE&                                                                 
+AS                                                                         
+U1 &SYSTEM_RESPONSE&                                                       
+AS The conversion of the current package is aborted.                       
+U1 &WHAT_TO_DO&                                                            
+AS SAP support should be contacted to fix the issue and then you should run
+   the conversion again.                                                   
+U1 &SYS_ADMIN&                                                             
+AS                                                                         

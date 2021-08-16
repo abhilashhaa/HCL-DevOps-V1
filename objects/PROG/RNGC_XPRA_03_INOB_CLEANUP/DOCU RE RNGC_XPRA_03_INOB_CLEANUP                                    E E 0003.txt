@@ -1,0 +1,23 @@
+U1 &PURPOSE&                                                               
+AS XPRA report for table INOB                                              
+AS                                                                         
+U1 &INTEGRATION&                                                           
+AS                                                                         
+U1 &PREREQUISITES&                                                         
+AS                                                                         
+U1 &FEATURES&                                                              
+AS                                                                         
+U2 &SELECTION&                                                             
+AS                                                                         
+U2 &STANDARD_VARIANTS&                                                     
+AS                                                                         
+U2 &OUTPUT&                                                                
+AS                                                                         
+U1 &ACTIVITIES&                                                            
+AS The following data conversion is performed by this XPRA:                
+AS Every entry in the INOB table for which there is no corresponding KSSK  
+   entry (where INOB-CUOBJ = KSSK-OBJEK), is considered an inconsistent    
+   INOB entry which should not remain in the database table. These INOB    
+   entries are deleted by the XRPA report.                                 
+U1 &EXAMPLE&                                                               
+AS                                                                         

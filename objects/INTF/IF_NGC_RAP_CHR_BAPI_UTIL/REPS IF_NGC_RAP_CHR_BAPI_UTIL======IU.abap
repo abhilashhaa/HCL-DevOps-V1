@@ -1,0 +1,54 @@
+interface IF_NGC_RAP_CHR_BAPI_UTIL
+  public .
+
+
+  methods CREATE_CHARACTERISTIC
+    importing
+      !IS_CHARACTERISTIC_BAPI type BAPICHARACTDETAIL
+      !IT_CHARCDESC_BAPI type TT_BAPICHARACTDESCR optional
+      !IT_CHARCVALNUM_BAPI type TT_BAPICHARACTVALUESNUM optional
+      !IT_CHARCVALCHAR_BAPI type TT_BAPICHARACTVALUESCHAR optional
+      !IT_CHARCVALCURR_BAPI type TT_BAPICHARACTVALUESCURR optional
+      !IT_CHARCVALDESC_BAPI type TT_BAPICHARACTVALUESDESCR optional
+      !IT_CHARCREF_BAPI type TT_BAPICHARACTREFERENCES optional
+      !IT_CHARCRSTRCN_BAPI type TT_BAPICHARACTRESTRICTIONS optional
+      !IV_CHANGENUMBER type AENNR optional
+      !IV_TESTRUN type ABAP_BOOL optional
+    returning
+      value(RT_RETURN) type BAPIRETTAB .
+  methods CHANGE_CHARACTERISTIC
+    importing
+      !IV_CHARACTERISTIC type ATNAM
+      !IV_CHANGENUMBER type AENNR optional
+      !IT_CHARC_BAPI type TT_BAPICHARACTDETAIL
+      !IT_CHARCDESC_BAPI type TT_BAPICHARACTDESCR optional
+      !IT_CHARCVALNUM_BAPI type TT_BAPICHARACTVALUESNUM optional
+      !IT_CHARCVALCHAR_BAPI type TT_BAPICHARACTVALUESCHAR optional
+      !IT_CHARCVALCURR_BAPI type TT_BAPICHARACTVALUESCURR optional
+      !IT_CHARCVALDESC_BAPI type TT_BAPICHARACTVALUESDESCR optional
+      !IT_CHARCREF_BAPI type TT_BAPICHARACTREFERENCES optional
+      !IT_CHARCRSTRCN_BAPI type TT_BAPICHARACTRESTRICTIONS optional
+      !IV_TESTRUN type ABAP_BOOL optional
+    returning
+      value(RT_RETURN) type BAPIRETTAB .
+  methods DELETE_CHARACTERISTIC
+    importing
+      !IV_CHARACTERISTIC type ATNAM
+      !IV_TESTRUN type ABAP_BOOL optional
+      !IV_CHANGENUMBER type AENNR optional
+    returning
+      value(RT_RETURN) type BAPIRETTAB .
+  methods READ_CURRENCY_DECIMALS
+    importing
+      !IV_CURRENCY type TCURX-CURRKEY
+    returning
+      value(RV_DECIMALS) type TCURX-CURRDEC .
+  methods READ_CHARC_FROM_BUFFER
+    returning
+      value(RT_CABN) type TT_CABN .
+  methods READ_CHANGE_NUMBER_VALID_FROM
+    importing
+      !IV_CHANGE_NO type AENNR
+    returning
+      value(RV_VALID_FROM) type CC_CCDAT .
+endinterface.

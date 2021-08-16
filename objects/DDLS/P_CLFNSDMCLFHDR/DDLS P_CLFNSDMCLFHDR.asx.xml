@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?><asx:abap xmlns:asx="http://www.sap.com/abapxml">
+<asx:values>
+<DDDDLSRC>
+<DDDDLSRC>
+<DDLNAME>P_CLFNSDMCLFHDR</DDLNAME>
+<AS4LOCAL>N</AS4LOCAL>
+<AS4USER>SAP</AS4USER>
+<AS4DATE>2019-05-20</AS4DATE>
+<AS4TIME>09:24:11</AS4TIME>
+<SOURCE>// Classification Helper View for CLF_HDR SDM
+@ClientHandling.algorithm: #SESSION_VARIABLE
+@AbapCatalog: {
+  sqlViewName: 'PSDMCH',
+  compiler.compareFilter: true,
+  preserveKey: true
+}
+@AccessControl.authorizationCheck: #NOT_ALLOWED
+@VDM: {
+  private: true,
+  viewType: #BASIC,
+  lifecycle.contract.type: #NONE
+}
+
+@ObjectModel: {
+  usageType.sizeCategory: #L,
+  usageType.serviceQuality: #X,
+  usageType.dataClass: #TRANSACTIONAL
+}
+
+// Statuses:
+//   1 - Existent line in CLF_HDR with OBJEKP unfilled, Single object case
+//   2 - Existent line in CLF_HDR with OBJEKP unfilled, Multi object case
+//   3 - Non-existent line in CLF_HDR based on KSSK, Single object case
+//   4 - Non-existent line in CLF_HDR based on KSSK, Multi object case
+//   5 - Non-existent line in CLF_HDR based on KSSK, Class-Class assignment case
+//   9 - Everything is ok, no conversion required
+
+define view P_ClfnSdmClfHdr
+  as select from clf_hdr
+    inner join tcla on clf_hdr.klart = tcla.klart
+  {
+    clf_hdr.obtab,
+    clf_hdr.objek,
+    clf_hdr.mafid,
+    clf_hdr.klart,
+    clf_hdr.objek as objekp,
+    clf_hdr.cuobj,
+    clf_hdr.tstmp_i,
+    clf_hdr.user_i,
+    clf_hdr.tstmp_c,
+    clf_hdr.user_c,
+    case
+      when clf_hdr.objekp = ''
+      then '1'
+      else '9'
+    end as sdm_status
+  }
+  where mafid = 'O' and tcla.multobj = ' '
+
+  union all
+
+  select from clf_hdr
+    inner join tcla on clf_hdr.klart = tcla.klart
+  {
+    clf_hdr.obtab,
+    clf_hdr.objek,
+    clf_hdr.mafid,
+    clf_hdr.klart,
+    clf_hdr.cuobj as objekp,
+    clf_hdr.cuobj,
+    clf_hdr.tstmp_i,
+    clf_hdr.user_i,
+    clf_hdr.tstmp_c,
+    clf_hdr.user_c,
+    case
+      when clf_hdr.objekp = ''
+      then '2'
+      else '9'
+    end as sdm_status
+  }
+  where mafid = 'O' and tcla.multobj = 'X'
+
+  union all
+
+  select distinct from kssk
+    inner join tcla on kssk.klart = tcla.klart
+    left outer join clf_hdr
+      on  tcla.obtab = clf_hdr.obtab
+      and kssk.objek = clf_hdr.objek
+      and kssk.mafid = clf_hdr.mafid
+      and kssk.klart = clf_hdr.klart
+  {
+    tcla.obtab as obtab,
+    kssk.objek as objek,
+    kssk.mafid as mafid,
+    kssk.klart as klart,
+    kssk.objek as objekp,
+    cast('000000000000000000' as cuobj) as cuobj,
+    tstmp_current_utctimestamp() as tstmp_i,
+    '' as user_i,
+    0 as tstmp_c,
+    '' as user_c,
+    case
+      when clf_hdr.objek is null
+      then '3'
+      else '9'
+    end as sdm_status
+  }
+  where kssk.mafid = 'O' and tcla.multobj = ' '
+
+  union all
+
+  select distinct from kssk
+    inner join tcla on kssk.klart = tcla.klart
+    inner join inob on kssk.objek = inob.cuobj
+    left outer join clf_hdr
+      on  inob.obtab = clf_hdr.obtab
+      and inob.objek = clf_hdr.objek
+      and kssk.mafid = clf_hdr.mafid
+      and kssk.klart = clf_hdr.klart
+  {
+    inob.obtab as obtab,
+    inob.objek as objek,
+    kssk.mafid as mafid,
+    kssk.klart as klart,
+    inob.cuobj as objekp,
+    inob.cuobj as cuobj,
+    tstmp_current_utctimestamp() as tstmp_i,
+    '' as user_i,
+    0 as tstmp_c,
+    '' as user_c,
+    case
+      when clf_hdr.objek is null
+      then '4'
+      else '9'
+    end as sdm_status
+  }
+  where kssk.mafid = 'O' and tcla.multobj = 'X'
+
+  union all
+
+  select distinct from kssk
+    left outer join clf_hdr
+      on  clf_hdr.obtab = 'KLAH'
+      and kssk.objek = clf_hdr.objek
+      and kssk.mafid = clf_hdr.mafid
+      and kssk.klart = clf_hdr.klart
+  {
+    'KLAH' as obtab,
+    kssk.objek as objek,
+    kssk.mafid as mafid,
+    kssk.klart as klart,
+    '' as objekp,
+    cast('000000000000000000' as cuobj) as cuobj,
+    tstmp_current_utctimestamp() as tstmp_i,
+    '' as user_i,
+    0 as tstmp_c,
+    '' as user_c,
+    case
+      when clf_hdr.objek is null
+      then '5'
+      else '9'
+    end as sdm_status
+  }
+  where kssk.mafid = 'K'
+/*+[internal] {
+"BASEINFO":
+{
+"FROM":
+[
+"CLF_HDR",
+"INOB",
+"KSSK",
+"TCLA"
+],
+"ASSOCIATED":
+[],
+"BASE":
+[],
+"ANNO_REF":
+[],
+"VERSION":0
+}
+}*/</SOURCE>
+<PARENTNAME></PARENTNAME>
+<ACTFLAG></ACTFLAG>
+<CHGFLAG></CHGFLAG>
+<SOURCE_TYPE>V</SOURCE_TYPE>
+<SOURCE_ORIGIN>0</SOURCE_ORIGIN>
+<ABAP_LANGUAGE_VERSION></ABAP_LANGUAGE_VERSION>
+</DDDDLSRC>
+</DDDDLSRC>
+<DDDDLSRC02BT>
+<DDDDLSRC02BT>
+<DDLNAME>P_CLFNSDMCLFHDR</DDLNAME>
+<STRUCOBJN>P_CLFNSDMCLFHDR</STRUCOBJN>
+<DDLANGUAGE>E</DDLANGUAGE>
+<AS4LOCAL>N</AS4LOCAL>
+<DDTEXT></DDTEXT>
+</DDDDLSRC02BT>
+</DDDDLSRC02BT>
+<DDDDLSRCT>
+<DDDDLSRCT>
+<DDLNAME>P_CLFNSDMCLFHDR</DDLNAME>
+<DDLANGUAGE>E</DDLANGUAGE>
+<AS4LOCAL>N</AS4LOCAL>
+<DDTEXT>Classification SDM Helper View for CLF_HDR</DDTEXT>
+</DDDDLSRCT>
+</DDDDLSRCT>
+<DDFIELDANNO>
+<DDFIELDANNO>
+<STRUCOBJN>P_CLFNSDMCLFHDR</STRUCOBJN>
+<LFIELDNAME>MANDT</LFIELDNAME>
+<NAME>ABAPCATALOG</NAME>
+<POSITION>1</POSITION>
+<VALUE></VALUE>
+</DDFIELDANNO>
+<DDFIELDANNO>
+<STRUCOBJN>P_CLFNSDMCLFHDR</STRUCOBJN>
+<LFIELDNAME>MANDT</LFIELDNAME>
+<NAME>ABAPCATALOG.INTERNAL</NAME>
+<POSITION>2</POSITION>
+<VALUE></VALUE>
+</DDFIELDANNO>
+<DDFIELDANNO>
+<STRUCOBJN>P_CLFNSDMCLFHDR</STRUCOBJN>
+<LFIELDNAME>MANDT</LFIELDNAME>
+<NAME>ABAPCATALOG.INTERNAL.ISMANDT</NAME>
+<POSITION>3</POSITION>
+<VALUE></VALUE>
+</DDFIELDANNO>
+</DDFIELDANNO>
+<DDHEADANNO>
+<DDHEADANNO>
+<STRUCOBJN>P_CLFNSDMCLFHDR</STRUCOBJN>
+<NAME>ABAPCATALOG</NAME>
+<POSITION>1</POSITION>
+<VALUE></VALUE>
+</DDHEADANNO>
+<DDHEADANNO>
+<STRUCOBJN>P_CLFNSDMCLFHDR</STRUCOBJN>
+<NAME>ABAPCATALOG.COMPILER</NAME>
+<POSITION>3</POSITION>
+<VALUE></VALUE>
+</DDHEADANNO>
+<DDHEADANNO>
+<STRUCOBJN>P_CLFNSDMCLFHDR</STRUCOBJN>
+<NAME>ABAPCATALOG.COMPILER.COMPAREFILTER</NAME>
+<POSITION>4</POSITION>
+<VALUE>true</VALUE>
+</DDHEADANNO>
+<DDHEADANNO>
+<STRUCOBJN>P_CLFNSDMCLFHDR</STRUCOBJN>
+<NAME>ABAPCATALOG.PRESERVEKEY</NAME>
+<POSITION>5</POSITION>
+<VALUE>true</VALUE>
+</DDHEADANNO>
+<DDHEADANNO>
+<STRUCOBJN>P_CLFNSDMCLFHDR</STRUCOBJN>
+<NAME>ABAPCATALOG.SQLVIEWNAME</NAME>
+<POSITION>2</POSITION>
+<VALUE>'PSDMCH'</VALUE>
+</DDHEADANNO>
+<DDHEADANNO>
+<STRUCOBJN>P_CLFNSDMCLFHDR</STRUCOBJN>
+<NAME>ACCESSCONTROL</NAME>
+<POSITION>8</POSITION>
+<VALUE></VALUE>
+</DDHEADANNO>
+<DDHEADANNO>
+<STRUCOBJN>P_CLFNSDMCLFHDR</STRUCOBJN>
+<NAME>ACCESSCONTROL.AUTHORIZATIONCHECK</NAME>
+<POSITION>9</POSITION>
+<VALUE>#NOT_ALLOWED</VALUE>
+</DDHEADANNO>
+<DDHEADANNO>
+<STRUCOBJN>P_CLFNSDMCLFHDR</STRUCOBJN>
+<NAME>CLIENTHANDLING</NAME>
+<POSITION>6</POSITION>
+<VALUE></VALUE>
+</DDHEADANNO>
+<DDHEADANNO>
+<STRUCOBJN>P_CLFNSDMCLFHDR</STRUCOBJN>
+<NAME>CLIENTHANDLING.ALGORITHM</NAME>
+<POSITION>7</POSITION>
+<VALUE>#SESSION_VARIABLE</VALUE>
+</DDHEADANNO>
+<DDHEADANNO>
+<STRUCOBJN>P_CLFNSDMCLFHDR</STRUCOBJN>
+<NAME>OBJECTMODEL</NAME>
+<POSITION>16</POSITION>
+<VALUE></VALUE>
+</DDHEADANNO>
+<DDHEADANNO>
+<STRUCOBJN>P_CLFNSDMCLFHDR</STRUCOBJN>
+<NAME>OBJECTMODEL.USAGETYPE</NAME>
+<POSITION>17</POSITION>
+<VALUE></VALUE>
+</DDHEADANNO>
+<DDHEADANNO>
+<STRUCOBJN>P_CLFNSDMCLFHDR</STRUCOBJN>
+<NAME>OBJECTMODEL.USAGETYPE.DATACLASS</NAME>
+<POSITION>20</POSITION>
+<VALUE>#TRANSACTIONAL</VALUE>
+</DDHEADANNO>
+<DDHEADANNO>
+<STRUCOBJN>P_CLFNSDMCLFHDR</STRUCOBJN>
+<NAME>OBJECTMODEL.USAGETYPE.SERVICEQUALITY</NAME>
+<POSITION>19</POSITION>
+<VALUE>#X</VALUE>
+</DDHEADANNO>
+<DDHEADANNO>
+<STRUCOBJN>P_CLFNSDMCLFHDR</STRUCOBJN>
+<NAME>OBJECTMODEL.USAGETYPE.SIZECATEGORY</NAME>
+<POSITION>18</POSITION>
+<VALUE>#L</VALUE>
+</DDHEADANNO>
+<DDHEADANNO>
+<STRUCOBJN>P_CLFNSDMCLFHDR</STRUCOBJN>
+<NAME>VDM</NAME>
+<POSITION>10</POSITION>
+<VALUE></VALUE>
+</DDHEADANNO>
+<DDHEADANNO>
+<STRUCOBJN>P_CLFNSDMCLFHDR</STRUCOBJN>
+<NAME>VDM.LIFECYCLE</NAME>
+<POSITION>13</POSITION>
+<VALUE></VALUE>
+</DDHEADANNO>
+<DDHEADANNO>
+<STRUCOBJN>P_CLFNSDMCLFHDR</STRUCOBJN>
+<NAME>VDM.LIFECYCLE.CONTRACT</NAME>
+<POSITION>14</POSITION>
+<VALUE></VALUE>
+</DDHEADANNO>
+<DDHEADANNO>
+<STRUCOBJN>P_CLFNSDMCLFHDR</STRUCOBJN>
+<NAME>VDM.LIFECYCLE.CONTRACT.TYPE</NAME>
+<POSITION>15</POSITION>
+<VALUE>#NONE</VALUE>
+</DDHEADANNO>
+<DDHEADANNO>
+<STRUCOBJN>P_CLFNSDMCLFHDR</STRUCOBJN>
+<NAME>VDM.PRIVATE</NAME>
+<POSITION>11</POSITION>
+<VALUE>true</VALUE>
+</DDHEADANNO>
+<DDHEADANNO>
+<STRUCOBJN>P_CLFNSDMCLFHDR</STRUCOBJN>
+<NAME>VDM.VIEWTYPE</NAME>
+<POSITION>12</POSITION>
+<VALUE>#BASIC</VALUE>
+</DDHEADANNO>
+</DDHEADANNO>
+<TADIR>
+<TADIR>
+<PGMID>R3TR</PGMID>
+<OBJECT>DDLS</OBJECT>
+<OBJ_NAME>P_CLFNSDMCLFHDR</OBJ_NAME>
+<KORRNUM></KORRNUM>
+<SRCSYSTEM>SAP</SRCSYSTEM>
+<AUTHOR>SAP</AUTHOR>
+<SRCDEP></SRCDEP>
+<DEVCLASS>NGC_CORE_DB</DEVCLASS>
+<GENFLAG></GENFLAG>
+<EDTFLAG></EDTFLAG>
+<CPROJECT> S</CPROJECT>
+<MASTERLANG>E</MASTERLANG>
+<VERSID>0.0</VERSID>
+<PAKNOCHECK></PAKNOCHECK>
+<OBJSTABLTY></OBJSTABLTY>
+<COMPONENT>S4CORE</COMPONENT>
+<CRELEASE>104</CRELEASE>
+<DELFLAG></DELFLAG>
+<TRANSLTTXT></TRANSLTTXT>
+<CREATED_ON>2019-04-23</CREATED_ON>
+<CHECK_DATE>2019-04-23</CHECK_DATE>
+<CHECK_CFG></CHECK_CFG>
+</TADIR>
+</TADIR>
+</asx:values>
+</asx:abap>

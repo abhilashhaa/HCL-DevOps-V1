@@ -1,0 +1,7 @@
+CLASS ltc_ngc_core_clf_persistency DEFINITION
+  FOR TESTING
+  DURATION SHORT
+  RISK LEVEL HARMLESS
+  FINAL
+  INHERITING FROM tc_ngc_core_clf_persistency.
+ENDCLASS.

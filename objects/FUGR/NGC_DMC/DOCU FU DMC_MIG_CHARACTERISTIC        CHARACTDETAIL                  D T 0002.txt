@@ -1,0 +1,7 @@
+U1 &MEANING&                                                               
+AS Merkmalattribute                                                        
+AS Mußeingaben: siehe Funktionsbaustein-Dokumentation                      
+U1 &RANGE&                                                                 
+AS                                                                         
+U1 &DEFAULT&                                                               
+AS                                                                         

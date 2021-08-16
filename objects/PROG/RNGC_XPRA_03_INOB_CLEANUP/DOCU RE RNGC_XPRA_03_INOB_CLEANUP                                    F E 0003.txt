@@ -1,0 +1,23 @@
+U1 &PURPOSE&                                                               
+AS Programme XPRA pour table INOB                                          
+AS                                                                         
+U1 &INTEGRATION&                                                           
+AS                                                                         
+U1 &PREREQUISITES&                                                         
+AS                                                                         
+U1 &FEATURES&                                                              
+AS                                                                         
+U2 &SELECTION&                                                             
+AS                                                                         
+U2 &STANDARD_VARIANTS&                                                     
+AS                                                                         
+U2 &OUTPUT&                                                                
+AS                                                                         
+U1 &ACTIVITIES&                                                            
+AS Le programme XPRA exécute la conversion des données suivantes :         
+AS Toute entrée dans la table INOB pour laquelle il n’existe pas d’entrée  
+   KSSK correspondante (où INOB-CUOBJ = KSSK-OBJEK), est considérée comme  
+   une entrée INOB incohérente et doit être supprimée de la table de base  
+   de données. Ces entrées INOB sont supprimées par le programme XPRA.     
+U1 &EXAMPLE&                                                               
+AS                                                                         

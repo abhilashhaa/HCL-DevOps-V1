@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?><asx:abap xmlns:asx="http://www.sap.com/abapxml">
+<asx:values>
+<ACMDCLSRC>
+<ACMDCLSRC>
+<DCLNAME>I_CLFNCHARCBASIC</DCLNAME>
+<AS4LOCAL>A</AS4LOCAL>
+<AS4USER>SAP</AS4USER>
+<AS4DATE>2018-05-15</AS4DATE>
+<AS4TIME>11:26:01</AS4TIME>
+<SOURCE>@EndUserText.label: 'Mapping role for I_ClfnCharcBasic' 
+@MappingRole: true 
+define role I_ClfnCharcBasic { 
+  grant select on I_ClfnCharcBasic 
+    // Characteristic authorization
+      where ( 
+            ( CharcMaintAuthGrp = ''  and 
+            ( ) =  aspect pfcg_auth (  C_CABN, ACTVT = '03' ) //display
+          ) 
+      or    (  CharcMaintAuthGrp &lt;&gt; ''  and 
+            ( CharcMaintAuthGrp )  = aspect pfcg_auth ( C_CABN_GRP, ATAUTH ) and
+            ( ) =  aspect pfcg_auth (  C_CABN, ACTVT = '03' ) ) //display 
+          ); 
+}</SOURCE>
+<PARENTNAME></PARENTNAME>
+<ABAP_LANGUAGE_VERSION></ABAP_LANGUAGE_VERSION>
+</ACMDCLSRC>
+</ACMDCLSRC>
+<ACMDCLSRCT>
+<ACMDCLSRCT>
+<DCLNAME>I_CLFNCHARCBASIC</DCLNAME>
+<DCLLANGUAGE>E</DCLLANGUAGE>
+<AS4LOCAL>A</AS4LOCAL>
+<DDTEXT>Mapping role for I_ClfnCharcBasic</DDTEXT>
+</ACMDCLSRCT>
+</ACMDCLSRCT>
+<TADIR>
+<TADIR>
+<PGMID>R3TR</PGMID>
+<OBJECT>DCLS</OBJECT>
+<OBJ_NAME>I_CLFNCHARCBASIC</OBJ_NAME>
+<KORRNUM></KORRNUM>
+<SRCSYSTEM>SAP</SRCSYSTEM>
+<AUTHOR>SAP</AUTHOR>
+<SRCDEP></SRCDEP>
+<DEVCLASS>NGC_CORE_VDM</DEVCLASS>
+<GENFLAG></GENFLAG>
+<EDTFLAG></EDTFLAG>
+<CPROJECT> S</CPROJECT>
+<MASTERLANG>E</MASTERLANG>
+<VERSID>0.0</VERSID>
+<PAKNOCHECK></PAKNOCHECK>
+<OBJSTABLTY></OBJSTABLTY>
+<COMPONENT>S4CORE</COMPONENT>
+<CRELEASE>103</CRELEASE>
+<DELFLAG></DELFLAG>
+<TRANSLTTXT></TRANSLTTXT>
+<CREATED_ON>2018-05-15</CREATED_ON>
+<CHECK_DATE>2018-05-15</CHECK_DATE>
+<CHECK_CFG></CHECK_CFG>
+</TADIR>
+</TADIR>
+</asx:values>
+</asx:abap>

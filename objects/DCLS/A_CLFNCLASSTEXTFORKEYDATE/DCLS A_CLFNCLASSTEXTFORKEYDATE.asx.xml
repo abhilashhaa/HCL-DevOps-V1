@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?><asx:abap xmlns:asx="http://www.sap.com/abapxml">
+<asx:values>
+<ACMDCLSRC>
+<ACMDCLSRC>
+<DCLNAME>A_CLFNCLASSTEXTFORKEYDATE</DCLNAME>
+<AS4LOCAL>A</AS4LOCAL>
+<AS4USER>SAP</AS4USER>
+<AS4DATE>2018-03-10</AS4DATE>
+<AS4TIME>11:51:00</AS4TIME>
+<SOURCE>@EndUserText.label: 'Mapping Role for A_ClfnClassTextForKeyDate'
+@MappingRole: true
+define role A_ClfnClassTextForKeyDate{
+  grant select on A_ClfnClassTextForKeyDate
+    // ClassType authorization
+    where ( _Class( P_KeyDate : $parameters.P_KeyDate ).ClassType ) =  aspect pfcg_auth (  C_TCLA_BKA, KLART )
+    // Class authorization
+      and ( ( _Class( P_KeyDate : $parameters.P_KeyDate ).ClassMaintAuthGrp = '' and 
+          ( ) =  aspect pfcg_auth (  C_KLAH_BKP, ACTVT = '03' ) )  //display                                                           
+        or 
+          ( _Class( P_KeyDate : $parameters.P_KeyDate ).ClassMaintAuthGrp &lt;&gt; '' and  
+          ( _Class( P_KeyDate : $parameters.P_KeyDate ).ClassMaintAuthGrp ) =  aspect pfcg_auth (  C_KLAH_BKP, BGRKP, ACTVT = '03' ) ) ) //display      
+   ;
+}</SOURCE>
+<PARENTNAME></PARENTNAME>
+<ABAP_LANGUAGE_VERSION></ABAP_LANGUAGE_VERSION>
+</ACMDCLSRC>
+</ACMDCLSRC>
+<ACMDCLSRCT>
+<ACMDCLSRCT>
+<DCLNAME>A_CLFNCLASSTEXTFORKEYDATE</DCLNAME>
+<DCLLANGUAGE>D</DCLLANGUAGE>
+<AS4LOCAL>A</AS4LOCAL>
+<DDTEXT>Mapping-Rolle für A_ClfnClassTextForKeyDate</DDTEXT>
+</ACMDCLSRCT>
+<ACMDCLSRCT>
+<DCLNAME>A_CLFNCLASSTEXTFORKEYDATE</DCLNAME>
+<DCLLANGUAGE>E</DCLLANGUAGE>
+<AS4LOCAL>A</AS4LOCAL>
+<DDTEXT>Mapping Role for A_ClfnClassTextForKeyDate</DDTEXT>
+</ACMDCLSRCT>
+<ACMDCLSRCT>
+<DCLNAME>A_CLFNCLASSTEXTFORKEYDATE</DCLNAME>
+<DCLLANGUAGE>F</DCLLANGUAGE>
+<AS4LOCAL>A</AS4LOCAL>
+<DDTEXT>Rôle d'affectation pour A_ClfnClassTextForKeyDate</DDTEXT>
+</ACMDCLSRCT>
+<ACMDCLSRCT>
+<DCLNAME>A_CLFNCLASSTEXTFORKEYDATE</DCLNAME>
+<DCLLANGUAGE>N</DCLLANGUAGE>
+<AS4LOCAL>A</AS4LOCAL>
+<DDTEXT>Toewijzingsrol voor A_ClfnClassTextForKeyDate</DDTEXT>
+</ACMDCLSRCT>
+<ACMDCLSRCT>
+<DCLNAME>A_CLFNCLASSTEXTFORKEYDATE</DCLNAME>
+<DCLLANGUAGE>T</DCLLANGUAGE>
+<AS4LOCAL>A</AS4LOCAL>
+<DDTEXT>A_ClfnClassTextForKeyDate için eşleme rolü</DDTEXT>
+</ACMDCLSRCT>
+</ACMDCLSRCT>
+<TADIR>
+<TADIR>
+<PGMID>R3TR</PGMID>
+<OBJECT>DCLS</OBJECT>
+<OBJ_NAME>A_CLFNCLASSTEXTFORKEYDATE</OBJ_NAME>
+<KORRNUM></KORRNUM>
+<SRCSYSTEM>SAP</SRCSYSTEM>
+<AUTHOR>SAP</AUTHOR>
+<SRCDEP></SRCDEP>
+<DEVCLASS>NGC_API_VDM</DEVCLASS>
+<GENFLAG></GENFLAG>
+<EDTFLAG></EDTFLAG>
+<CPROJECT> S</CPROJECT>
+<MASTERLANG>E</MASTERLANG>
+<VERSID>0.0</VERSID>
+<PAKNOCHECK></PAKNOCHECK>
+<OBJSTABLTY></OBJSTABLTY>
+<COMPONENT>S4CORE</COMPONENT>
+<CRELEASE>103</CRELEASE>
+<DELFLAG></DELFLAG>
+<TRANSLTTXT></TRANSLTTXT>
+<CREATED_ON>2017-08-08</CREATED_ON>
+<CHECK_DATE>2017-08-08</CHECK_DATE>
+<CHECK_CFG></CHECK_CFG>
+</TADIR>
+</TADIR>
+</asx:values>
+</asx:abap>

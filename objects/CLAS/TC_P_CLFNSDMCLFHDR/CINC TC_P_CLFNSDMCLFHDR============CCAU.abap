@@ -1,0 +1,8 @@
+"! @testing P_ClfnSdmClfHdr
+CLASS ltc_p_clfnsdmclfhdr DEFINITION
+  INHERITING FROM tc_p_clfnsdmclfhdr
+  FOR TESTING
+  DURATION SHORT
+  RISK LEVEL HARMLESS
+  FINAL.
+ENDCLASS.

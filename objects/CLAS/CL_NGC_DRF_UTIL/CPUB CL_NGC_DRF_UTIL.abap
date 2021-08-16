@@ -1,0 +1,35 @@
+class CL_NGC_DRF_UTIL definition
+  public
+  final
+  create private .
+
+public section.
+
+  interfaces IF_NGC_DRF_UTIL .
+
+  data MT_ALLOCATION_TAB type RMCLKSSK_TAB .
+  data MT_VALUE_TAB_CLASSIFICATION type TT_RMCLAUSP .
+  data MT_DELOB_TAB type TT_RMCLDOB .
+  data MT_KSSK_CLASSIFICATION type TT_KSSK .
+  data MT_INOB_CLASSIFICATION type TT_INOB .
+  data MT_AUSP_CLASSIFICATION type TT_AUSP .
+  data MT_ATNAM_SOURCE_CLASSIFICATION type CIFCLATNAM_TAB .
+  data MT_CLASS_SOURCE_CLASSIFICATION type CIFCLCLASS_TAB .
+  data MT_CHARACT_TAB_CHARACTERISTIC type TT_CABN .
+  data MT_CHARACT_DESCR_TAB type TT_CABNT .
+  data MT_VALUE_TAB_CHARACTERISTIC type TT_CAWN .
+  data MT_VALUE_DESCR_TAB type TT_CAWNT .
+  data MT_RESTRICTIONS_TAB type TT_TCME .
+  data MT_REFERENCES_TAB type TT_CABNZ .
+  data MT_CLASS_HEADER type TT_KLAH .
+  data MV_KSML_UPDATE type BOOLE_D .
+  data MV_SWOR_UPDATE type BOOLE_D .
+  data MT_CHARACT_TAB_CLASS type TT_KSML .
+  data MT_CATCHWORD_TAB type TT_SWOR .
+  data MT_CHARACT_TAB_O type TT_KSML .
+
+  class-methods GET_INSTANCE
+    importing
+      !IV_REPLICATION_MODE type DRF_DLMOD default IF_DRF_CONST=>MODE_DIRECTLY
+    returning
+      value(RO_INSTANCE) type ref to IF_NGC_DRF_UTIL .

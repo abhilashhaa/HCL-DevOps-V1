@@ -1,0 +1,18 @@
+U1 &CAUSE&                                                                 
+AS Datenbankinkonsistenz: Es gibt mindestens ein klart-obtab-objek, das    
+   mehr als ein CUOBJ in der Tabelle INOB hat. Details hierzu finden Sie im
+   vollständigen Protokoll des Konvertierungsreports                       
+   (RNGC_XPRA_04_CLF_HDR), in dem die betroffenen CUOBJs durch Warnmeldunge
+=  n gekennzeichnet sind.                                                  
+U1 &SYSTEM_RESPONSE&                                                       
+AS In diesen Fällen werden die ersten CUOBJs in der Tabelle CLF_HDR        
+   verwendet.                                                              
+U1 &WHAT_TO_DO&                                                            
+AS Die Datenbankinkonsistenz kann durch Zusammenführung aller CUOBJs zu    
+   einem behoben werden. Das heißt, dass alle anderen CUOBJs für das       
+   klart-obtab-objek überall (KSSK, AUSP usw.) durch das erste (das nun in 
+   CLF_HDR enthalten ist) ersetzt werden müssen. Und die anderen CUOBJs    
+   müssen dann aus INOB entfernt werden.                                   
+U1 &SYS_ADMIN&                                                             
+AS                                                                         
+*                                                                          

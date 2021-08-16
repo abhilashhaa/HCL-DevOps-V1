@@ -1,0 +1,23 @@
+U1 &PURPOSE&                                                               
+AS XPRA-Report für die Tabelle CAWNT                                       
+U1 &INTEGRATION&                                                           
+AS                                                                         
+U1 &PREREQUISITES&                                                         
+AS                                                                         
+U1 &FEATURES&                                                              
+AS                                                                         
+U2 &SELECTION&                                                             
+AS                                                                         
+U2 &STANDARD_VARIANTS&                                                     
+AS                                                                         
+U2 &OUTPUT&                                                                
+AS                                                                         
+U1 &ACTIVITIES&                                                            
+AS Von diesem XPRA wird die folgende Datenkonvertierung durchgeführt:      
+/  Für einen Eintrag, der mehrmals mit unterschiedlichen Änderungsnummern  
+   geändert wurde, wird das Feld DATUB in der Tabelle CAWNT auf Basis des  
+   Nachfolgers gefüllt. Wenn ein Nachfolger vorhanden ist, dann ist DATUB =
+   DATUV des Nachfolgers - 1, anderenfalls ist DATUB = 99991231, es wird   
+   also das spätestmögliche Datum gesetzt.                                 
+U1 &EXAMPLE&                                                               
+AS                                                                         

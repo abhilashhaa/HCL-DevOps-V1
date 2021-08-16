@@ -1,0 +1,38 @@
+private section.
+
+  types:
+    lty_t_fieldname TYPE STANDARD TABLE OF fieldname .
+
+  methods GET_BODY
+    importing
+      !IS_CHARCDESC type A_CLFNCHARCDESCFORKEYDATE optional
+      !IT_CHARCDESC_FIELDNAME type LTY_T_FIELDNAME optional
+      !IS_CHARCREF type A_CLFNCHARCREFFORKEYDATE optional
+      !IS_CHARCRSTRCN type A_CLFNCHARCRSTRCNFORKEYDATE optional
+      !IT_CHARCREF_FIELDNAME type LTY_T_FIELDNAME optional
+      !IT_CHARCRSTRCN_FIELDNAME type LTY_T_FIELDNAME optional
+      !IS_CHARCVALUE type A_CLFNCHARCVALUEFORKEYDATE optional
+      !IT_CHARCVALUE_FIELDNAME type LTY_T_FIELDNAME optional
+    returning
+      value(RV_BODY) type STRING .
+  methods GET_BODY_CHARACTERISTIC
+    importing
+      !IS_CHARC type CL_NGC_BIL_CHR=>LTY_CLFN_CHARC_CDS-S_CHARC optional
+      !IT_CHARC_FIELDNAME type LTY_T_FIELDNAME optional
+      !IT_CHARCDESC type CL_NGC_BIL_CHR=>LTY_CLFN_CHARC_CDS-T_CHARCDESC optional
+      !IT_CHARCDESC_FIELDNAME type LTY_T_FIELDNAME optional
+      !IT_CHARCREF type CL_NGC_BIL_CHR=>LTY_CLFN_CHARC_CDS-T_CHARCREF optional
+      !IT_CHARCREF_FIELDNAME type LTY_T_FIELDNAME optional
+      !IT_CHARCRSTRCN type CL_NGC_BIL_CHR=>LTY_CLFN_CHARC_CDS-T_CHARCRSTRCN optional
+      !IT_CHARCRSTRCN_FIELDNAME type LTY_T_FIELDNAME optional
+      !IT_CHARCVALUE type CL_NGC_BIL_CHR=>LTY_CLFN_CHARC_CDS-T_CHARCVALUE optional
+      !IT_CHARCVALUE_FIELDNAME type LTY_T_FIELDNAME optional
+      !IT_CHARCVALUEDESC type CL_NGC_BIL_CHR=>LTY_CLFN_CHARC_CDS-T_CHARCVALUEDESC optional
+      !IT_CHARCVALUEDESC_FIELDNAME type LTY_T_FIELDNAME optional
+    returning
+      value(RV_BODY) type STRING .
+  methods CHECK_CHR_EXISTS
+    importing
+      !IV_CHARACTERISTIC type ATNAM
+    returning
+      value(RV_EXISTS) type ABAP_BOOL .

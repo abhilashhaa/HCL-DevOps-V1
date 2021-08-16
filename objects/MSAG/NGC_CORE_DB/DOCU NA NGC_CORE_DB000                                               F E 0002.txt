@@ -1,0 +1,23 @@
+U1 &CAUSE&                                                                 
+AS Le module fonction OBJECT_CHECK pour le type d'objet de gestion &V1&    
+   n'est pas implémenté.                                                   
+U1 &SYSTEM_RESPONSE&                                                       
+AS Aucune valeur de caractéristique de référence ne peut être récupérée    
+   pour une instance d'objet de gestion de ce type (&V1&) et ne peut donc  
+   pas être copiée dans la table AUSP.                                     
+U1 &WHAT_TO_DO&                                                            
+AS Les valeurs de caractéristiques de référence de ce type d'objet de      
+   gestion (&V1&) ne sont actuellement pas copiées dans la table AUSP.     
+/  S'il n'est pas nécessaire de les copier, aucune action n'est alors      
+   requise.                                                                
+AS Sinon :                                                                 
+AS Si ce type d'objet de gestion (&V1&) est personnalisé, le client doit   
+   alors implémenter le module fonction et exécuter de nouveau la          
+   conversion.                                                             
+AS Si ce type d'objet de gestion (&V1&) est standard, le support SAP doit  
+   alors être contacté.                                                    
+AS Le nom actuel du module fonction OBJECT_CHECK est déterminé par le      
+   module fonction CLOCH_FUNCTION_NAME et en spécifiant OBTAB comme        
+   paramètre d'entrée (généralement comme ceci : OBJECT_CHECK_MARA).       
+U1 &SYS_ADMIN&                                                             
+AS                                                                         

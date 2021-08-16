@@ -1,0 +1,36 @@
+U1 &PURPOSE&                                                               
+AS In den Customizing-Einstellungen für die Klassifizierung können Knoten- 
+   und Blattobjekte hinsichtlich einer Klassenart definiert werden. Im Fall
+   eines Blattobjekts (z.B. eine Materialvariante eines konfigurierbaren   
+   Materials) führt der redundante Speicher der Objektmerkmalswerte des    
+   entsprechenden Knotenobjekts (z.B. konfigurierbares Material) zur       
+   Einschränkung der zulässigen Wertemenge des Blattobjekts auf den im     
+   Knotenobjekt definierten Wert.                                          
+AS Sie klassifizieren z.B. ein Material mit einer konfigurierbaren         
+   Klassenart (300), und Sie nehmen eine Einschränkung auf einen zulässigen
+   Einzelwert für ein Merkmal vor. Wenn das Material jetzt in der          
+   Konfiguration verwenden wird, wird dieser Wert automatisch gesetzt. Er  
+   kann vom Benutzer nicht geändert oder gelöscht werden. Dies ist das     
+   Standardverhalten.                                                      
+AS Mit dem redundanten Speicher geschieht diese Art der Einschränkung nun  
+   automatisch für alle Objektmerkmale, die sich auf die Datenbanktabelle  
+   MARA oder MAKT beziehen und der verwendeten Klasse zugeordnet sind.     
+AS Dieser Report zeigt eine Liste der Konfigurationsowner für              
+   Objektmerkmalswerte an, die sich auf die Datenbanktabelle MARA oder MAKT
+=   beziehen.                                                              
+U1 &INTEGRATION&                                                           
+AS                                                                         
+U1 &PREREQUISITES&                                                         
+AS                                                                         
+U1 &FEATURES&                                                              
+AS                                                                         
+U2 &SELECTION&                                                             
+AS                                                                         
+U2 &STANDARD_VARIANTS&                                                     
+AS                                                                         
+U2 &OUTPUT&                                                                
+AS                                                                         
+U1 &ACTIVITIES&                                                            
+AS                                                                         
+U1 &EXAMPLE&                                                               
+AS                                                                         

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?><asx:abap xmlns:asx="http://www.sap.com/abapxml">
+<asx:values>
+<ACMDCLSRC>
+<ACMDCLSRC>
+<DCLNAME>A_CLFNPRODUCT</DCLNAME>
+<AS4LOCAL>A</AS4LOCAL>
+<AS4USER>SAP</AS4USER>
+<AS4DATE>2018-02-09</AS4DATE>
+<AS4TIME>16:08:33</AS4TIME>
+<SOURCE>@EndUserText.label: 'Auto assigned mapping role for A_CLFNPRODUCT'
+@MappingRole: true
+define role A_ClfnProduct {
+   grant select on A_ClfnProduct
+    where   ( AuthorizationGroup ) ?= 
+    aspect pfcg_auth (  M_MATE_MAT,
+                        BEGRU,
+                        actvt = '03' )
+    and ( _ProductType.AuthorizationGroup  )   ?= aspect pfcg_auth ( M_MATE_MAR, BEGRU, actvt = '03' ) 
+   
+    and ( _ProductGroup.AuthorizationGroup )   ?= aspect pfcg_auth ( M_MATE_WGR, begru, actvt = '03' ); 
+                                                                                                                                                                  
+}</SOURCE>
+<PARENTNAME></PARENTNAME>
+<ABAP_LANGUAGE_VERSION></ABAP_LANGUAGE_VERSION>
+</ACMDCLSRC>
+</ACMDCLSRC>
+<ACMDCLSRCT>
+<ACMDCLSRCT>
+<DCLNAME>A_CLFNPRODUCT</DCLNAME>
+<DCLLANGUAGE>D</DCLLANGUAGE>
+<AS4LOCAL>A</AS4LOCAL>
+<DDTEXT>Automatisch zugeordnete Mapping-Rolle für A_CLFNPRODUCT</DDTEXT>
+</ACMDCLSRCT>
+<ACMDCLSRCT>
+<DCLNAME>A_CLFNPRODUCT</DCLNAME>
+<DCLLANGUAGE>E</DCLLANGUAGE>
+<AS4LOCAL>A</AS4LOCAL>
+<DDTEXT>Auto assigned mapping role for A_CLFNPRODUCT</DDTEXT>
+</ACMDCLSRCT>
+<ACMDCLSRCT>
+<DCLNAME>A_CLFNPRODUCT</DCLNAME>
+<DCLLANGUAGE>F</DCLLANGUAGE>
+<AS4LOCAL>A</AS4LOCAL>
+<DDTEXT>Rôle de mappage affecté automatiquement pour A_CLFNPRODUCT</DDTEXT>
+</ACMDCLSRCT>
+<ACMDCLSRCT>
+<DCLNAME>A_CLFNPRODUCT</DCLNAME>
+<DCLLANGUAGE>N</DCLLANGUAGE>
+<AS4LOCAL>A</AS4LOCAL>
+<DDTEXT>Automatisch toegewezen toewijzingsrol voor A_CLFNPRODUCT</DDTEXT>
+</ACMDCLSRCT>
+<ACMDCLSRCT>
+<DCLNAME>A_CLFNPRODUCT</DCLNAME>
+<DCLLANGUAGE>T</DCLLANGUAGE>
+<AS4LOCAL>A</AS4LOCAL>
+<DDTEXT>A_CLFNPRODUCT için otomatik tayin edilen eşleme rolü</DDTEXT>
+</ACMDCLSRCT>
+</ACMDCLSRCT>
+<TADIR>
+<TADIR>
+<PGMID>R3TR</PGMID>
+<OBJECT>DCLS</OBJECT>
+<OBJ_NAME>A_CLFNPRODUCT</OBJ_NAME>
+<KORRNUM></KORRNUM>
+<SRCSYSTEM>SAP</SRCSYSTEM>
+<AUTHOR>SAP</AUTHOR>
+<SRCDEP></SRCDEP>
+<DEVCLASS>NGC_API_VDM</DEVCLASS>
+<GENFLAG></GENFLAG>
+<EDTFLAG></EDTFLAG>
+<CPROJECT> S</CPROJECT>
+<MASTERLANG>E</MASTERLANG>
+<VERSID>0.0</VERSID>
+<PAKNOCHECK></PAKNOCHECK>
+<OBJSTABLTY></OBJSTABLTY>
+<COMPONENT>S4CORE</COMPONENT>
+<CRELEASE>103</CRELEASE>
+<DELFLAG></DELFLAG>
+<TRANSLTTXT></TRANSLTTXT>
+<CREATED_ON>2017-08-18</CREATED_ON>
+<CHECK_DATE>2017-08-18</CHECK_DATE>
+<CHECK_CFG></CHECK_CFG>
+</TADIR>
+</TADIR>
+</asx:values>
+</asx:abap>

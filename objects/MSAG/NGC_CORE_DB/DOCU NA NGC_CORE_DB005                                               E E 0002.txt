@@ -1,0 +1,18 @@
+U1 &CAUSE&                                                                 
+AS There is at least one business object which has reference               
+   characteristics with values that cannot be converted. The details can be
+=   found in the full log of the conversion report (RNGC_CONV_REF_CHAR),   
+   where the IDs of the business objects are indicated with warning        
+   messages.                                                               
+U1 &SYSTEM_RESPONSE&                                                       
+AS The reference characteristic value(s) of these business object(s) cannot
+   be copied to table AUSP, therefore they are skipped.                    
+U1 &WHAT_TO_DO&                                                            
+AS If the reference characteristic values of these business objects are not
+   necessary to be copied to AUSP, then there is no action required.       
+   Otherwise, the type conversion error(s) should be examined (hint: check 
+   the actual type of the reference characteristic and the actual type of  
+   the referred field in the referred table: they should match). Fix not   
+   matching characteristic types and then run the conversion again.        
+U1 &SYS_ADMIN&                                                             
+AS                                                                         

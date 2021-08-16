@@ -1,0 +1,9 @@
+U1 &CAUSE&                                                                 
+AS                                                                         
+U1 &SYSTEM_RESPONSE&                                                       
+AS Die Konvertierung des aktuellen Pakets wird abgebrochen.                
+U1 &WHAT_TO_DO&                                                            
+AS Entsperren Sie den Tabelleneintrag (andere Anwendung sperrt ihn         
+   zurzeit), und führen Sie die Konvertierung erneut aus.                  
+U1 &SYS_ADMIN&                                                             
+AS                                                                         

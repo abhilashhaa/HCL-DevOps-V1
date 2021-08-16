@@ -1,0 +1,23 @@
+U1 &PURPOSE&                                                               
+AS Programme XPRA pour table CAWNT                                         
+U1 &INTEGRATION&                                                           
+AS                                                                         
+U1 &PREREQUISITES&                                                         
+AS                                                                         
+U1 &FEATURES&                                                              
+AS                                                                         
+U2 &SELECTION&                                                             
+AS                                                                         
+U2 &STANDARD_VARIANTS&                                                     
+AS                                                                         
+U2 &OUTPUT&                                                                
+AS                                                                         
+U1 &ACTIVITIES&                                                            
+AS Le programme XPRA exécute la conversion des données suivantes :         
+/  Pour une entrée modifiée plusieurs fois avec différents numéros de      
+   fiches de modification, la zone DATUB de la table CAWNT est renseignée  
+   en fonction de son successeur. Si nous avons un successeur, alors la    
+   zone DATUB = DATUV du successeur - 1. Sinon, la zone DATUB = "99991231",
+   c'est-à-dire qu'elle est définie avec la date maximale.                 
+U1 &EXAMPLE&                                                               
+AS                                                                         

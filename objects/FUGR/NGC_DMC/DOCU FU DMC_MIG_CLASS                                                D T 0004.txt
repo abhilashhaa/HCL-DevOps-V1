@@ -1,0 +1,22 @@
+U1 &FUNCTIONALITY&                                                         
+AS Mit diesem Baustein können Klassen angelegt werden, sofern sie nicht    
+   vorhanden sind.                                                         
+AS Es werden die Daten angelegt, die auch mit BAPI_CLASS_GETDETAIL         
+   angezeigt werden können.                                                
+AS Ein Eintrag in folgende Felder ist erforderlich:                        
+B1 CLASSNUMNEW (Klasse) und CLASSTYPENEW (Klassenart)                      
+B1 Tabelle CLASSDESCRIPTIONS (Bezeichnung der Klasse)                      
+B1 entweder Language_Int (interne Sprachdarstellung, einstellig) oder      
+   Language_ISO (externe Sprachdarstellung, zweistellig). Die              
+   ISO-Darstellung hat jedoch Priorität.                                   
+AS                                                                         
+U1 &EXAMPLE&                                                               
+AS                                                                         
+U1 &HINTS&                                                                 
+AS                                                                         
+U1 &FURTHER_SOURCES_OF_INF&                                                
+AS Wenn das BAPI fehlerfrei abläuft, enthält die Tabelle <ZH>Return</>     
+   keine Meldung des Typs 'E'.                                             
+U1 Achtung                                                                 
+AS Dieses BAPI führt keine Änderungen auf der Datenbank durch, dazu muß    
+   das BAPI BapiService.TransactionCommit aufgerufen werden!               

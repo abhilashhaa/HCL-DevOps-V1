@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?><asx:abap xmlns:asx="http://www.sap.com/abapxml">
+<asx:values>
+<ACMDCLSRC>
+<ACMDCLSRC>
+<DCLNAME>A_RECPROCEQUIPRQMTCLASS</DCLNAME>
+<AS4LOCAL>A</AS4LOCAL>
+<AS4USER>SAP</AS4USER>
+<AS4DATE>2018-06-11</AS4DATE>
+<AS4TIME>11:21:46</AS4TIME>
+<SOURCE>@EndUserText.label: 'Mapping role for A_RecProcEquipRqmtClass' 
+@MappingRole: true 
+
+define role A_RecProcEquipRqmtClass { 
+  grant select on A_RecProcEquipRqmtClass
+    where 
+    (
+      ( _RecipeProcessEquipRqmt( P_KeyDate : $parameters.P_KeyDate )._Recipe( P_KeyDate : $parameters.P_KeyDate ).RecipeAuthorizationGroup &lt;&gt; '' 
+        and ( _RecipeProcessEquipRqmt( P_KeyDate : $parameters.P_KeyDate )._Recipe( P_KeyDate : $parameters.P_KeyDate ).RecipeType,
+              _RecipeProcessEquipRqmt( P_KeyDate : $parameters.P_KeyDate )._Recipe( P_KeyDate : $parameters.P_KeyDate ).RecipePurpose,
+              _RecipeProcessEquipRqmt( P_KeyDate : $parameters.P_KeyDate )._Recipe( P_KeyDate : $parameters.P_KeyDate ).RecipeStatus,
+              _RecipeProcessEquipRqmt( P_KeyDate : $parameters.P_KeyDate )._Recipe( P_KeyDate : $parameters.P_KeyDate ).RecipeAuthorizationGroup ) =
+        aspect pfcg_auth (  PLM_RCPCVS,
+                            PLM_RCPTYP,
+                            PLM_RCPUSG,
+                            PLM_RCPSTA,
+                            PLM_RCPAGR,
+                            ACTVT = '03' )
+      ) 
+    or 
+      ( ( _RecipeProcessEquipRqmt( P_KeyDate : $parameters.P_KeyDate )._Recipe( P_KeyDate : $parameters.P_KeyDate ).RecipeAuthorizationGroup is null or _RecipeProcessEquipRqmt( P_KeyDate : $parameters.P_KeyDate )._Recipe( P_KeyDate : $parameters.P_KeyDate ).RecipeAuthorizationGroup = ''  ) 
+        and ( _RecipeProcessEquipRqmt( P_KeyDate : $parameters.P_KeyDate )._Recipe( P_KeyDate : $parameters.P_KeyDate ).RecipeType,
+              _RecipeProcessEquipRqmt( P_KeyDate : $parameters.P_KeyDate )._Recipe( P_KeyDate : $parameters.P_KeyDate ).RecipePurpose,
+              _RecipeProcessEquipRqmt( P_KeyDate : $parameters.P_KeyDate )._Recipe( P_KeyDate : $parameters.P_KeyDate ).RecipeStatus ) =
+        aspect pfcg_auth (  PLM_RCPCVS,
+                            PLM_RCPTYP,
+                            PLM_RCPUSG,
+                            PLM_RCPSTA,
+                            ACTVT = '03' ) 
+      )
+    )
+                        
+    and ( _RecipeProcessEquipRqmt( P_KeyDate : $parameters.P_KeyDate )._Recipe( P_KeyDate : $parameters.P_KeyDate ).RecipePrimOutpAuthznGrp,
+          _RecipeProcessEquipRqmt( P_KeyDate : $parameters.P_KeyDate )._Recipe( P_KeyDate : $parameters.P_KeyDate ).RecipePrimOutpSpecType ) = 
+    aspect pfcg_auth (  C_SHES_TR2,
+                        ESEAUTHGRP,
+                        SUBCAT,
+                        actvt = '03' )
+                        
+  // ClassType authorization 
+    and ( ClassType ) = aspect pfcg_auth (  C_TCLA_BKA, KLART )
+  // Class authorization      
+    and ( ( ClassMaintAuthGrp = '' and 
+          ( ) =  aspect pfcg_auth (  C_KLAH_BKP, ACTVT = '03' ) )  //display                                                           
+      or 
+          ( ClassMaintAuthGrp &lt;&gt; '' and  
+          ( ClassMaintAuthGrp ) =  aspect pfcg_auth (  C_KLAH_BKP, BGRKP, ACTVT = '03' ) ) ) //display          
+  // Classification authorization
+    and ( ( ClassClassfctnAuthGrp = '' and 
+          ( ) =  aspect pfcg_auth (  C_KLAH_BKL, ACTVT = '03' ) )  //display                                                           
+      or 
+          ( ClassClassfctnAuthGrp &lt;&gt; '' and  
+          ( ClassClassfctnAuthGrp ) =  aspect pfcg_auth (  C_KLAH_BKL, BGRKL, ACTVT = '03' ) ) ) //display      
+    ;
+}</SOURCE>
+<PARENTNAME></PARENTNAME>
+<ABAP_LANGUAGE_VERSION></ABAP_LANGUAGE_VERSION>
+</ACMDCLSRC>
+</ACMDCLSRC>
+<ACMDCLSRCT>
+<ACMDCLSRCT>
+<DCLNAME>A_RECPROCEQUIPRQMTCLASS</DCLNAME>
+<DCLLANGUAGE>D</DCLLANGUAGE>
+<AS4LOCAL>A</AS4LOCAL>
+<DDTEXT>Zuordnungsrolle für A_RecProcEquipRqmtClass</DDTEXT>
+</ACMDCLSRCT>
+<ACMDCLSRCT>
+<DCLNAME>A_RECPROCEQUIPRQMTCLASS</DCLNAME>
+<DCLLANGUAGE>E</DCLLANGUAGE>
+<AS4LOCAL>A</AS4LOCAL>
+<DDTEXT>Mapping role for A_RecProcEquipRqmtClass</DDTEXT>
+</ACMDCLSRCT>
+<ACMDCLSRCT>
+<DCLNAME>A_RECPROCEQUIPRQMTCLASS</DCLNAME>
+<DCLLANGUAGE>F</DCLLANGUAGE>
+<AS4LOCAL>A</AS4LOCAL>
+<DDTEXT>Rôle de mappage pour A_RecProcEquipRqmtClass</DDTEXT>
+</ACMDCLSRCT>
+<ACMDCLSRCT>
+<DCLNAME>A_RECPROCEQUIPRQMTCLASS</DCLNAME>
+<DCLLANGUAGE>N</DCLLANGUAGE>
+<AS4LOCAL>A</AS4LOCAL>
+<DDTEXT>Toewijzingsrol voor A_RecProcEquipRqmtClass</DDTEXT>
+</ACMDCLSRCT>
+<ACMDCLSRCT>
+<DCLNAME>A_RECPROCEQUIPRQMTCLASS</DCLNAME>
+<DCLLANGUAGE>T</DCLLANGUAGE>
+<AS4LOCAL>A</AS4LOCAL>
+<DDTEXT>A_RecProcEquipRqmtClass için eşleme rolü</DDTEXT>
+</ACMDCLSRCT>
+</ACMDCLSRCT>
+<TADIR>
+<TADIR>
+<PGMID>R3TR</PGMID>
+<OBJECT>DCLS</OBJECT>
+<OBJ_NAME>A_RECPROCEQUIPRQMTCLASS</OBJ_NAME>
+<KORRNUM></KORRNUM>
+<SRCSYSTEM>SAP</SRCSYSTEM>
+<AUTHOR>SAP</AUTHOR>
+<SRCDEP></SRCDEP>
+<DEVCLASS>NGC_API_VDM</DEVCLASS>
+<GENFLAG></GENFLAG>
+<EDTFLAG></EDTFLAG>
+<CPROJECT> S</CPROJECT>
+<MASTERLANG>E</MASTERLANG>
+<VERSID>0.0</VERSID>
+<PAKNOCHECK></PAKNOCHECK>
+<OBJSTABLTY></OBJSTABLTY>
+<COMPONENT>S4CORE</COMPONENT>
+<CRELEASE>103</CRELEASE>
+<DELFLAG></DELFLAG>
+<TRANSLTTXT></TRANSLTTXT>
+<CREATED_ON>2018-01-29</CREATED_ON>
+<CHECK_DATE>2018-01-29</CHECK_DATE>
+<CHECK_CFG></CHECK_CFG>
+</TADIR>
+</TADIR>
+</asx:values>
+</asx:abap>

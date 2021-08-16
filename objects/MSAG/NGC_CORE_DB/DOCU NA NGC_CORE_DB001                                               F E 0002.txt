@@ -1,0 +1,27 @@
+U1 &CAUSE&                                                                 
+AS Incohérence de la base de données : au moins un objet de gestion est    
+   introuvable. Le journal complet du programme de conversion (RNG         
+=  C_CONV_REF_CHAR) donne de plus amples informations. Les ID des objets de
+   gestion inexistants sont indiqués par des messages d'avertissement.     
+U1 &SYSTEM_RESPONSE&                                                       
+AS Les valeurs de caractéristiques de référence de ces objets de gestion ne
+   peuvent pas être copiées dans la table AUSP. Elles sont alors ignorées. 
+U1 &WHAT_TO_DO&                                                            
+AS L'incohérence dans la base de données peut être éliminée de deux        
+   façons :                                                                
+AS ·,,Créez l'objet de gestion (qui n'existe pas actuellement) avec le même
+   ID d'objet et le même type d'objet (si l'IU du système de classification
+   est déclenché pendant la création, il n'est pas nécessaire d'exécuter de
+   nouveau la conversion).                                                 
+AS Ou :                                                                    
+AS ·,,Supprimez les entrées de base de données faisant référence à cet     
+   objet de gestion inexistant dans les tables INOB et/ou KSSK et/ou AUSP. 
+   Dans ce cas, il n'est pas nécessaire d'exécuter de nouveau la           
+   conversion.                                                             
+AS Notez que si la catégorie de classe utilisée est multobj=true, alors    
+   KSSK.OBJEK et AUSP.OBJEK sont les ID d'objet interne correspondant à la 
+   table INOB.CUOBJ (l'ID d'objet réel est INOB.OBJEK dans ce cas). Si la  
+   catégorie de classe est multobj=false, alors KSSK.OBJEK et AUSP.OBJEK   
+   sont les ID d'objet réels.                                              
+U1 &SYS_ADMIN&                                                             
+AS                                                                         

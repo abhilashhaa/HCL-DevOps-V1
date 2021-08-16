@@ -1,0 +1,23 @@
+U1 &PURPOSE&                                                               
+AS XPRA-Report für die Tabelle INOB                                        
+AS                                                                         
+U1 &INTEGRATION&                                                           
+AS                                                                         
+U1 &PREREQUISITES&                                                         
+AS                                                                         
+U1 &FEATURES&                                                              
+AS                                                                         
+U2 &SELECTION&                                                             
+AS                                                                         
+U2 &STANDARD_VARIANTS&                                                     
+AS                                                                         
+U2 &OUTPUT&                                                                
+AS                                                                         
+U1 &ACTIVITIES&                                                            
+AS Von diesem XPRA wird die folgende Datenkonvertierung durchgeführt:      
+AS Jeder Eintrag in der Tabelle INOB, für den es keinen zugehörigen        
+   KSSK-Eintrag gibt (wenn INOB-CUOBJ = KSSK-OBJEK), wird als inkonsis     
+=  tenter INOB-Eintrag betrachtet, der nicht in der Datenbanktabelle       
+   bleiben sollte. Diese INOB-Einträge werden vom XPRA-Report gelöscht.    
+U1 &EXAMPLE&                                                               
+AS                                                                         

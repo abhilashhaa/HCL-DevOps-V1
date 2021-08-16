@@ -1,0 +1,16 @@
+interface IF_EX_NGC_CLF_CHK_ASGN_CLASSES
+  public .
+
+
+  interfaces IF_BADI_INTERFACE .
+
+  methods CHECK_ASSIGN_CLASSES
+    importing
+      !IV_CLASSTYPE type KLASSENART
+      !IS_CLASSIFICATION_KEY type NGCS_CLASSIFICATION_KEY
+      !IT_CLASSIFICATION_REF_DATA type NGCT_CLASSIFICATION_REF_DATA
+      !IT_CLASS type NGCT_CLASS_OBJECT
+    changing
+      !CV_ALLOWED type BOOLE_D
+      !CT_MESSAGE type NGCT_MSG_WITH_INDEX .
+endinterface.

@@ -1,0 +1,9 @@
+U1 &CAUSE&                                                                 
+AS                                                                         
+U1 &SYSTEM_RESPONSE&                                                       
+AS La conversion du package actuel est annulée.                            
+U1 &WHAT_TO_DO&                                                            
+AS Débloquez l’entrée de table (d'autres applications sont actuellement en 
+   train de la bloquer) et exécutez de nouveau la conversion.              
+U1 &SYS_ADMIN&                                                             
+AS                                                                         

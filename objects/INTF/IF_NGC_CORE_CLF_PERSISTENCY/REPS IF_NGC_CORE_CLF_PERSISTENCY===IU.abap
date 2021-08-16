@@ -1,0 +1,68 @@
+interface IF_NGC_CORE_CLF_PERSISTENCY
+  public .
+
+
+  methods CLEANUP .
+  methods READ
+    importing
+      !IT_KEYS type NGCT_CORE_CLASSIFICATION_KEY
+      !IV_LOCK type BOOLE_D default ABAP_FALSE
+    exporting
+      !ET_CLASSIFICATION type NGCT_CORE_CLASSIFICATION
+      !ET_MESSAGE type NGCT_CORE_CLASSIFICATION_MSG .
+  methods READ_CLASSTYPE
+    importing
+      !IV_CLFNOBJECTTABLE type TABELLE
+      !IV_CLASSTYPE type KLASSENART
+    returning
+      value(RS_CLASSTYPE) type NGCS_CORE_CLASS_TYPE .
+  methods READ_CLASSTYPES
+    returning
+      value(RT_CLASSTYPE) type NGCT_CORE_CLASS_TYPE .
+  methods WRITE
+    importing
+      !IT_CLASSIFICATION type NGCT_CORE_CLASSIFICATION_UPD
+      !IT_CLASS type NGCT_CORE_CLASS
+    exporting
+      !ET_MESSAGE type NGCT_CORE_CLASSIFICATION_MSG .
+  methods SAVE .
+  methods READ_CLF_STATUSES
+    importing
+      !IV_CLASSTYPE type KLASSENART
+    returning
+      value(RT_CLASSIFICATION_STATUSES) type NGCT_CORE_CLASSIFICATION_STAT .
+  methods READ_CLF_STATUS_DESCRIPTION
+    importing
+      !IV_CLASSTYPE type KLASSENART
+      !IV_CLFNSTATUS type CLSTATUS
+    returning
+      value(RV_CLASSIFICATIONSTATUSDESCR) type EINTEXT .
+  methods READ_INTERNAL_OBJECT_NUMBER
+    importing
+      !IS_CLASSIFICATION_KEY type NGCS_CORE_CLASSIFICATION_KEY
+      !IT_CLASSTYPE type NGCT_CLASSTYPE
+    returning
+      value(RT_OBJ_INT_ID) type NGCT_CORE_CLF_OBJ_INT_ID .
+  methods LOCK
+    importing
+      !IT_CLASSIFICATION type NGCT_CORE_CLASSIFICATION_UPD
+      !IT_CLASS type NGCT_CORE_CLASS
+    exporting
+      !ET_MESSAGE type NGCT_CORE_CLASSIFICATION_MSG .
+  methods LOCK_ALL
+    importing
+      !IT_CLASSIFICATION_KEY type NGCT_CORE_CLASSIFICATION_KEY
+    exporting
+      !ET_MESSAGE type NGCT_CORE_CLASSIFICATION_MSG .
+  methods LOCK_BY_DATA
+    importing
+      !IT_CLASSFICATION_LOCK type NGCT_CORE_CLASSIFICATION_LOCK
+    exporting
+      !ET_MESSAGE type NGCT_CORE_CLF_CLASS_MSG .
+  methods READ_CLASSTYPE_OBJTYPE_REDUN
+    importing
+      !IV_CLASSTYPE type KLASSENART
+      !IV_CLFNOBJECTTABLE type TABELLE
+    returning
+      value(RV_CHARCREDUNDANTSTORISALLOWED) type REDUNDANZ .
+endinterface.

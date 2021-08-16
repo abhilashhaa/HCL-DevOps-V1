@@ -1,0 +1,12 @@
+CLASS th_api_clfn_cls DEFINITION
+  PUBLIC
+  INHERITING FROM cl_odata_mm_dpcext_test_base
+  ABSTRACT
+  CREATE PUBLIC
+  FOR TESTING
+  DURATION MEDIUM
+  RISK LEVEL DANGEROUS .
+
+  PUBLIC SECTION.
+
+    METHODS constructor .

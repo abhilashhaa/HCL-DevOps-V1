@@ -1,0 +1,8 @@
+CLASS tc_i_clfnclasssuperiorforkeydt DEFINITION
+  PUBLIC
+  ABSTRACT
+  FINAL
+  CREATE PUBLIC
+  FOR TESTING .
+
+  PUBLIC SECTION.

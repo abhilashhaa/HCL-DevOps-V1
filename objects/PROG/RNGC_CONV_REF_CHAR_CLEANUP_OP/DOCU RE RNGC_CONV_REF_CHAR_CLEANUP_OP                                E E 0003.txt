@@ -1,0 +1,30 @@
+U1 &PURPOSE&                                                               
+AS This report deletes values (AUSP entries) of reference characteristics  
+   for business objects that are nodes or configurable materials.          
+U1 &INTEGRATION&                                                           
+AS                                                                         
+U1 &PREREQUISITES&                                                         
+AS                                                                         
+U1 &FEATURES&                                                              
+AS Parameters:                                                             
+AS Language - The specified language is used to determine the              
+   language-dependent reference characteristic values.                     
+AS Log to File - If checked, the main log of the report will be saved into 
+   a file with the name of the report. If not checked, it will be classic  
+   transport logger.                                                       
+AS Test Mode - If checked, the AUSP entries will not be deleted, but       
+   enlisted in a Spool.                                                    
+AS Business Object - If filled, the report will do the operation only for  
+   the specified business object (this field can be a MATNR, or any        
+   business object ID which is classified). If not filled, the report will 
+   operate on all business objects.                                        
+U2 &SELECTION&                                                             
+AS                                                                         
+U2 &STANDARD_VARIANTS&                                                     
+AS                                                                         
+U2 &OUTPUT&                                                                
+AS                                                                         
+U1 &ACTIVITIES&                                                            
+AS                                                                         
+U1 &EXAMPLE&                                                               
+AS                                                                         

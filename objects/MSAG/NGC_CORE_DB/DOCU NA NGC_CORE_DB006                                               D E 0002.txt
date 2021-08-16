@@ -1,0 +1,10 @@
+U1 &CAUSE&                                                                 
+AS Tabelle &V1& kann nicht gesperrt werden: bereits gesperrt               
+U1 &SYSTEM_RESPONSE&                                                       
+AS Die Umsetzung wird abgebrochen.                                         
+U1 &WHAT_TO_DO&                                                            
+AS Entsperren Sie die Tabelle (da andere Anwendungen sie derzeit sperren), 
+   und führen Sie die Umsetzung erneut aus.                                
+U1 &SYS_ADMIN&                                                             
+AS                                                                         
+*                                                                          

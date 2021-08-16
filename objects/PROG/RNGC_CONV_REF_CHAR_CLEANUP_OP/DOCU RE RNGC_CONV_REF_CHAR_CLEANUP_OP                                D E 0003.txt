@@ -1,0 +1,31 @@
+U1 &PURPOSE&                                                               
+AS Dieser Report löscht Werte (AUSP-Einträge) von Objektmerkmalen für      
+   Business-Objekte, bei denen es sich um Knoten oder konfigurierbare      
+   Materialien handelt.                                                    
+U1 &INTEGRATION&                                                           
+AS                                                                         
+U1 &PREREQUISITES&                                                         
+AS                                                                         
+U1 &FEATURES&                                                              
+AS Parameter:                                                              
+AS Sprache: Die festgelegte Sprache wird zum Ermitteln der sprachabhängigen
+   Objektmerkmalswerte verwendet.                                          
+AS In Datei protokollieren: Wenn markiert, wird das Hauptprotokoll des     
+   Reports in einer Datei mit dem Namen des Reports gesichert. Wenn nicht  
+   markiert, wird die klassische Transportprotokollierung verwendet.       
+AS Testmodus: Wenn markiert, werden die AUSP-Einträge nicht gelöscht,      
+   sondern in einem Spool eingetragen.                                     
+AS Business-Objekt: Wenn gefüllt, führt der Report den Vorgang nur für das 
+   angegebene Business-Objekt aus (MATNR oder beliebige klassifizierte     
+   Business-Objekt-ID). Wenn nicht gefüllt, führt der Report den Vorgang   
+   für alle Business-Objekte aus.                                          
+U2 &SELECTION&                                                             
+AS                                                                         
+U2 &STANDARD_VARIANTS&                                                     
+AS                                                                         
+U2 &OUTPUT&                                                                
+AS                                                                         
+U1 &ACTIVITIES&                                                            
+AS                                                                         
+U1 &EXAMPLE&                                                               
+AS                                                                         

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?><asx:abap xmlns:asx="http://www.sap.com/abapxml">
+<asx:values>
+<NAMETAB>
+<NAMETAB>
+<NAME>API_ID</NAME>
+<KEY>X</KEY>
+<TYPE>C</TYPE>
+<LENGTH>000040</LENGTH>
+<DECIMALS>-1</DECIMALS>
+</NAMETAB>
+<NAMETAB>
+<NAME>AUTH_OBJECT</NAME>
+<KEY>X</KEY>
+<TYPE>C</TYPE>
+<LENGTH>000010</LENGTH>
+<DECIMALS>-1</DECIMALS>
+</NAMETAB>
+<NAMETAB>
+<NAME>BLOCKED_ACTVT</NAME>
+<KEY>X</KEY>
+<TYPE>C</TYPE>
+<LENGTH>000002</LENGTH>
+<DECIMALS>-1</DECIMALS>
+</NAMETAB>
+</NAMETAB>
+</asx:values>
+</asx:abap>

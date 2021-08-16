@@ -1,0 +1,48 @@
+CLASS ltc_ngc_bil_chr_charc DEFINITION FOR TESTING
+  DURATION SHORT
+  RISK LEVEL HARMLESS
+  FINAL
+  INHERITING FROM tc_ngc_bil_chr_charc.
+ENDCLASS.
+
+CLASS ltc_ngc_bil_chr_charc_desc DEFINITION FOR TESTING
+  DURATION SHORT
+  RISK LEVEL HARMLESS
+  FINAL
+  INHERITING FROM tc_ngc_bil_chr_charc_desc.
+ENDCLASS.
+
+CLASS ltc_ngc_bil_chr_charc_rstrcn DEFINITION FOR TESTING
+  DURATION SHORT
+  RISK LEVEL HARMLESS
+  FINAL
+  INHERITING FROM tc_ngc_bil_chr_charc_rstrcn.
+ENDCLASS.
+
+CLASS ltc_ngc_bil_chr_charc_ref DEFINITION FOR TESTING
+  DURATION SHORT
+  RISK LEVEL HARMLESS
+  FINAL
+  INHERITING FROM tc_ngc_bil_chr_charc_ref.
+ENDCLASS.
+
+CLASS ltc_ngc_bil_chr_charc_val DEFINITION FOR TESTING
+  DURATION SHORT
+  RISK LEVEL HARMLESS
+  FINAL
+  INHERITING FROM tc_ngc_bil_chr_charc_val.
+ENDCLASS.
+
+CLASS ltc_ngc_bil_chr_charc_val_desc DEFINITION FOR TESTING
+  DURATION SHORT
+  RISK LEVEL HARMLESS
+  FINAL
+  INHERITING FROM tc_ngc_bil_chr_charc_val_desc.
+ENDCLASS.
+
+CLASS ltc_ngc_bil_chr_transactional DEFINITION FOR TESTING
+  DURATION SHORT
+  RISK LEVEL HARMLESS
+  FINAL
+  INHERITING FROM tc_ngc_bil_chr_transactional.
+ENDCLASS.

@@ -1,0 +1,20 @@
+U1 &FUNCTIONALITY&                                                         
+AS This function module creates classes, if the classes do not yet exist.  
+AS It creates data that can also be displayed with BAPI_CLASS_GETDETAIL.   
+AS You must make an entry in the following fields:                         
+B1 CLASSNUM (class) and CLASSTYPE (class type)                             
+B1 Table CLASSDESCRIPTIONS (class description)                             
+B1 Either Language_Int (internal language key, one character) or           
+   Language_ISO (external language key, two characters). ISO format        
+   overrides internal format.                                              
+AS                                                                         
+U1 &EXAMPLE&                                                               
+AS                                                                         
+U1 &HINTS&                                                                 
+AS                                                                         
+U1 &FURTHER_SOURCES_OF_INF&                                                
+AS If the BAPI runs successfully, table <ZH>Return</> contains no messages 
+   of type 'E'.                                                            
+U1 Caution                                                                 
+AS This BAPI does not change the the database. To change the database, call
+   BAPI BapiService.TransactionCommit.                                     

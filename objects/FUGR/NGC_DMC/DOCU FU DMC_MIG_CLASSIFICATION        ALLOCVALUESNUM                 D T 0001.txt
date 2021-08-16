@@ -1,0 +1,6 @@
+U1 &MEANING&                                                               
+AS Merkmalbewertungen NUM,DATE,TIME                                        
+U1 &RANGE&                                                                 
+AS                                                                         
+U1 &DEFAULT&                                                               
+AS                                                                         

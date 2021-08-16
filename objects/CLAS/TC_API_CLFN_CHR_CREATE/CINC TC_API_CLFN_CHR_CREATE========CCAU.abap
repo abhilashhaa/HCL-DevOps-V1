@@ -1,0 +1,7 @@
+CLASS ltc_api_clfn_chr_create DEFINITION
+  FOR TESTING
+  DURATION MEDIUM
+  RISK LEVEL DANGEROUS
+  FINAL
+  INHERITING FROM tc_api_clfn_chr_create.
+ENDCLASS.

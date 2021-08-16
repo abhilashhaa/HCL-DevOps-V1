@@ -1,0 +1,21 @@
+U1 &PURPOSE&                                                               
+AS XPRA report for table NGC_CLHIER_IDX                                    
+U1 &INTEGRATION&                                                           
+AS                                                                         
+U1 &PREREQUISITES&                                                         
+AS                                                                         
+U1 &FEATURES&                                                              
+AS                                                                         
+U2 &SELECTION&                                                             
+AS                                                                         
+U2 &STANDARD_VARIANTS&                                                     
+AS                                                                         
+U2 &OUTPUT&                                                                
+AS                                                                         
+U1 &ACTIVITIES&                                                            
+AS The following data conversion is performed by this XPRA:                
+/  Based on the content of the KLAH and KSSK tables<(>,<)> it creates graph
+   index entries that can be used to retrieve the whole class hierarchy    
+   with one select.                                                        
+U1 &EXAMPLE&                                                               
+AS                                                                         

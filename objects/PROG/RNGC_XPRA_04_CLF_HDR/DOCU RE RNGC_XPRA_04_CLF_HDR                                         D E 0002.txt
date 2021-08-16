@@ -1,0 +1,23 @@
+U1 &PURPOSE&                                                               
+AS XPRA-Report zum Ausfüllen der Tabelle CLF_HDR.                          
+U1 &INTEGRATION&                                                           
+AS                                                                         
+U1 &PREREQUISITES&                                                         
+AS                                                                         
+U1 &FEATURES&                                                              
+AS                                                                         
+U2 &SELECTION&                                                             
+AS                                                                         
+U2 &STANDARD_VARIANTS&                                                     
+AS                                                                         
+U2 &OUTPUT&                                                                
+AS                                                                         
+U1 &ACTIVITIES&                                                            
+AS Von diesem XPRA wird die folgende Datenkonvertierung durchgeführt:      
+AS Das Feld OBJEKP ist in der Tabelle CLF_HDR in allen bereits vorhandenen 
+   Einträgen ausgefüllt (bei der Klassenart Einzelobjekt ist es OBJEK, bei 
+   der Klassenart Mehrfachobjekt ist es CUOBJ), und neue CLF_HDR-Einträge  
+   werden für alle KSSK-/INOB-Einträge erstellt, die keinen haben (OBJEKP  
+   wird mit der gleichen Logik ausgefüllt).                                
+U1 &EXAMPLE&                                                               
+AS                                                                         

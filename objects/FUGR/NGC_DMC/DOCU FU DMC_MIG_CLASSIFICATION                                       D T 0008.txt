@@ -1,0 +1,24 @@
+U1 Funktionalität                                                          
+*  Dieses BAPI legt eine Klassifizierung mit Bewertungen an, wenn sie      
+   nicht bereits existiert. Die Klassifizierung wird durch die             
+   Mußeingabefelder Objektschlüssel (ObjectKeyNew), Objekttabelle          
+   (ObjectTableNew), Klassenname (AllocDetail-Class_Num), Klassenart       
+   (AllocDetail-Class_Type) definiert. Die Merkmale und ihre Werte werden  
+   typabhängig in verschiedenen Tabellen mitgegeben: numerische, Zeit- und 
+   Datummerkmale in der Tabelle AllocValuesNum, Zeichen- und boolsche      
+   Merkmale in der Tabelle AllocValuesChar und Währungsmerkmale in der     
+   Tabelle AllocValuesCurr.                                                
+*  Wenn das BAPI fehlerfrei abläuft, enthält die Tabelle RETURN keine      
+   Meldung des Typs 'E'.                                                   
+U1 Hinweise                                                                
+*  Der Objektschlüssel (ObjectKey) muß im internen Format mitgegeben       
+   werden, also vor der Anwendung von Konvertiereungs-Exits.               
+   Beispielsweise muß eine Materialnummer mit führenden Nullen übergeben   
+   werden.                                                                 
+U1 Achtung                                                                 
+*  Dieses BAPI führt keine Änderung auf der Datenbank durch, dazu muß      
+   anschließend das BAPI BapiService.TransactionCommit aufgerufen werden!  
+*  Dieses BAPI kann nur mit Objekten, die keine Klasse sind, verwendet     
+   werden!                                                                 
+*  Die in diesem BAPI bearbeiteten Werte betreffen nur die                 
+   Klassifizierung, nicht aber die Konfigurationen!                        

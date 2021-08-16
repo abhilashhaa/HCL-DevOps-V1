@@ -1,0 +1,11 @@
+U1 &CAUSE&                                                                 
+AS Table &V3& contains an invalid valid-from date (&V1&) and valid-to date 
+   (&V2&) pair. Valid-from date must always be less or equal to the        
+   valid-to date.                                                          
+U1 &SYSTEM_RESPONSE&                                                       
+AS The class hierarchy index table (NGC_CLHIER_IDX) as a dependent table   
+   could not be adjusted properly.                                         
+U1 &WHAT_TO_DO&                                                            
+AS Check table &V3& and correct all the invalid entries.                   
+U1 &SYS_ADMIN&                                                             
+AS                                                                         

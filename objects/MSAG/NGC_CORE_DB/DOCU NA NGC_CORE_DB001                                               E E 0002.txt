@@ -1,0 +1,25 @@
+U1 &CAUSE&                                                                 
+AS Database inconsistency: There is at least one business object which is  
+   not found. The details can be found in the full log of the conversion   
+   report (RNGC_CONV_REF_CHAR), where the IDs of the non-existent business 
+   objects are indicated with warning messages.                            
+U1 &SYSTEM_RESPONSE&                                                       
+AS The reference characteristic values of these business objects can not be
+   copied to table AUSP, therefore they are skipped.                       
+U1 &WHAT_TO_DO&                                                            
+AS The database inconsistency can be eliminated by two ways:               
+AS ·,,Create the business object (which does not exist currently) with the 
+   exact same object ID and object type (if the classification UI is       
+   triggered during creating, the conversion does not need to be run       
+   again).                                                                 
+AS Or:                                                                     
+AS ·,,Erase the database entries referring to this non-existent business   
+   object from tables INOB and/or KSSK and/or AUSP. In this case the       
+   conversion does not need to be run again.                               
+AS Be aware, that if the used class type is a multobj=true class type, then
+   KSSK.OBJEK and AUSP.OBJEK are the internal object IDs matching in table 
+   INOB.CUOBJ (the true object ID is INOB.OBJEK in this case). If it is a  
+   multobj=false class type, then KSSK.OBJEK and AUSP.OBJEK are the true   
+   object IDs.                                                             
+U1 &SYS_ADMIN&                                                             
+AS                                                                         
