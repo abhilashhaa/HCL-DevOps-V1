@@ -1,0 +1,9 @@
+U4 &MEANING&                                                               
+AS Entspricht bei F1 auf ein Dynprofeld der Bden jeweiligen Feldnamen der  
+   im Dictionary referierten Bezugsstruktur.                               
+AS Die Angabe wird bei Anzeige von Datenelementdokumentation für die       
+   Drucktaste Technische Information benötigt.                             
+U4 &RANGE&                                                                 
+AS                                                                         
+U4 &DEFAULT&                                                               
+AS                                                                         

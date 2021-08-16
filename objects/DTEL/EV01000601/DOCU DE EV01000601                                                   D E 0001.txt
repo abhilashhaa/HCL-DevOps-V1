@@ -1,0 +1,12 @@
+U1 &DEFINITION&                                                            
+AS Das Datenelement dient als Muster für alle weiteren Datenelemente       
+   EV-n-, wobei n eine 8-stellige Zahl ist. An dieser Stelle sollen die    
+   folgenden Information vermerkt sein:                                    
+AS 1. Beschreibung des Zeitpunktes ( z.B. Buchen Beleg in Kurzform, bzw.   
+   genauere Angaben wie: "Zu diesem Zeitpunkt sind die Daten zum Beleg     
+   eingegeben und werden gesichert" )                                      
+AS 2. Angaben über die Schnittstelle ( exporting, importing und tables-    
+   Parameter, falls vorhanden )                                            
+AS                                                                         
+AS Der Zeitpunkt 00000000 darf nicht explizit für Ablauflogik verwendet    
+   werden !                                                                

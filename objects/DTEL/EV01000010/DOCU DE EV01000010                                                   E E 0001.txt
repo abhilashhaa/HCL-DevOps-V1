@@ -1,0 +1,11 @@
+U1 &DEFINITION&                                                            
+AS The data element is used as a reference for all other EV-n- data        
+   elements, where n is an eight-digit number. Here, you should note the   
+   following information:                                                  
+AS 1. Description of the time (for example, posting a document in short    
+   form, or specific information, such as: "At this time, the document has 
+   been entered and is saved.")                                            
+AS 2. Specifying via the interface (exporting, importing and specifying    
+   table parameters, if they exist)                                        
+AS                                                                         
+AS The time 00000000 may not be used explicitly for flow logic!            

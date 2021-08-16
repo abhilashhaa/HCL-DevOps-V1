@@ -1,0 +1,11 @@
+U1 &DEFINITION&                                                            
+AS This data element is used as a template for all other data elements     
+   EV-n-, where n is an 8 character number. At this point you should note  
+   the following information:                                              
+AS 1. Description of a time (for example, post document in short form or   
+   more exact details, such as: "At this point, the data is entered for the
+   document and will be saved")                                            
+AS 2. Data about the interface (exporting, importing, and table parameters 
+   if they exist)                                                          
+AS                                                                         
+AS Time 00000000 must not be used explicitly for the process logic!        

@@ -1,0 +1,9 @@
+U4 &MEANING&                                                               
+AS Beispiele für Dokumentenklassen, die in der Hilfe relevant sind:        
+AS 'DE' Datenelementdokumentation                                          
+AS 'NA' Nachrichtendokumentation                                           
+AS                                                                         
+U4 &RANGE&                                                                 
+AS                                                                         
+U4 &DEFAULT&                                                               
+AS                                                                         

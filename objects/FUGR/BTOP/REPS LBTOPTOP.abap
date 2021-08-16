@@ -1,0 +1,33 @@
+FUNCTION-POOL BTOP MESSAGE-ID B!.
+
+DATA: BEGIN OF FMTAB OCCURS 10.
+    INCLUDE STRUCTURE FMRFC.
+DATA: END OF FMTAB.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

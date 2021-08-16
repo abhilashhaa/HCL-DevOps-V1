@@ -1,0 +1,8 @@
+U4 &MEANING&                                                               
+AS Bei Verwendung innerhalb einer eigenprogrammierten Hilfe:               
+AS Name des Datenelements                                                  
+AS Arbeitsgebiet (xx) und Nachrichtennummer (yyy) in der form xxyyy        
+U4 &RANGE&                                                                 
+AS                                                                         
+U4 &DEFAULT&                                                               
+AS                                                                         

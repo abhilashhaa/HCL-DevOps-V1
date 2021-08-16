@@ -1,0 +1,6 @@
+U4 &MEANING&                                                               
+AS Wert, durch den die dritte '&' einer Nachricht ersetzt werden soll.     
+U4 &RANGE&                                                                 
+AS                                                                         
+U4 &DEFAULT&                                                               
+AS                                                                         

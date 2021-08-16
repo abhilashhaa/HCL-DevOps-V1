@@ -1,0 +1,7 @@
+U1 Définition                                                              
+AS    1. Avis de livraison lié à cette commande                            
+AS                                                                         
+AS    2. Interface :                                                       
+AS                      tables                                             
+/                           t_xekes                                        
+AS                          t_yekes                                        

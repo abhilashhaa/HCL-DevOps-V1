@@ -1,0 +1,12 @@
+U1 &DEFINITION&                                                            
+AS Cet élément de données sert de modèle à tous les autres éléments EV-n-, 
+   n étant un chiffre de 8 caractères. Les informations suivantes doivent  
+   être consignées à ce niveau :                                           
+AS 1. Description de l'événement (ex. : enregistrer document sous forme    
+   abrégée ou données plus précises telles que : "Pour cet événement, les  
+   données de ce document sont enregistrées et sauvegardées").             
+AS 2. Données sur l'interface (export, import, paramètres de table si ces  
+   données existent)                                                       
+AS                                                                         
+AS L'événement 00000000 ne doit pas être utilisé explicitement pour la     
+   logique d'exécution.                                                    

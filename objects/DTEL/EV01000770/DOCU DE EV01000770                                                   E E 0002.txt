@@ -1,0 +1,7 @@
+U1 Definition                                                              
+AS    1. Delivery note for purchase order                                  
+AS                                                                         
+AS    2. Interface:                                                        
+AS                      tables                                             
+/                           t_xekes                                        
+AS                          t_yekes                                        

@@ -1,0 +1,10 @@
+U4 &MEANING&                                                               
+AS Name der im Dictionary referierten Bezugsstruktur und des Feldnamens,   
+   getrennt durch '-'.                                                     
+AS ie Angabe wird bei Anzeige von Datenelementdokumentation für die        
+   Drucktaste Technische Information benötigt.                             
+AS                                                                         
+U4 &RANGE&                                                                 
+AS                                                                         
+U4 &DEFAULT&                                                               
+AS                                                                         

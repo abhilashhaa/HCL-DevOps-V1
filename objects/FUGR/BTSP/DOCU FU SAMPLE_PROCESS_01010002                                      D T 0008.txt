@@ -1,0 +1,13 @@
+/: DEFINE &TEXT& = 'Lesen des Kurztexts einer Meldung'                     
+/: DEFINE &EVENT& = '01010002'                                             
+/: DEFINE &TYPE& = 'PROCESS'                                               
+/: INCLUDE FI_OPEN_FI_DOCUMENTATION_1 OBJECT DOKU ID TX                    
+AS Diese Methode gibt den Kurztext zu einer Meldung zurück.                
+AS Über die Parameter dieser Methode spezifizieren Sie, zu welcher Meldung 
+   der Kurztexte gelesen werden soll.                                      
+AS &EXAMPLE&                                                               
+AS                                                                         
+U1 &HINTS&                                                                 
+AS                                                                         
+U1 &FURTHER_SOURCES_OF_INF&                                                
+AS                                                                         

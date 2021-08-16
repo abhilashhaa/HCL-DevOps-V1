@@ -1,0 +1,12 @@
+U1 &DEFINITION&                                                            
+AS L'élément de données sert de modèle pour tous les autres éléments de    
+   données EV-n-, n étant un nombre à 8 chiffres. A ce stade, notez les    
+   informations suivantes :                                                
+AS 1. Description du temps (par exemple, comptabiliser document de manière 
+   synthétique ou avec des plus amples détails tels que "A ce moment, les  
+   données sont entrées et sauvegardées pour le document").                
+AS 2. Données sur l'interface (exportation, importation et paramètres des  
+   tables s'ils existent)                                                  
+AS                                                                         
+AS Le temps 00000000 ne doit pas être utilisé de manière explicite pour la 
+   logique de déroulement.                                                 
