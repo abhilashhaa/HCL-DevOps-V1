@@ -1,0 +1,1 @@
+CLASS zcl_abapgit_object_w3mi DEFINITION PUBLIC INHERITING FROM zcl_abapgit_object_w3super FINAL.

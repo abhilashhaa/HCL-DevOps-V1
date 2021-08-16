@@ -1,0 +1,7 @@
+CLASS zcx_abapgit_not_found DEFINITION
+  PUBLIC
+  INHERITING FROM cx_static_check
+  FINAL
+  CREATE PUBLIC .
+
+  PUBLIC SECTION.

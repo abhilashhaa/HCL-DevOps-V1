@@ -1,0 +1,3 @@
+  PROTECTED SECTION.
+
+    METHODS order_matches REDEFINITION.

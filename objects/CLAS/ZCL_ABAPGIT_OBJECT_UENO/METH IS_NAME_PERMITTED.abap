@@ -1,0 +1,18 @@
+  METHOD is_name_permitted.
+
+    " It is unlikely that a serialized entity will have a name that is not permitted. However
+    " there may be reservations in TRESE which could prohibit the entity name.
+    " So to be safe, we check. Tx SD11 does this check.
+
+    CALL FUNCTION 'SDU_SAA_CHECK'
+      EXPORTING
+        obj_name   = me->ms_item-obj_name
+        obj_type   = me->ms_item-obj_type
+      EXCEPTIONS
+        wrong_type = 01.
+
+    IF sy-subrc <> 0.
+      zcx_abapgit_exception=>raise_t100( ).
+    ENDIF.
+
+  ENDMETHOD.

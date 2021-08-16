@@ -1,0 +1,2 @@
+  PRIVATE SECTION.
+    METHODS: fix_xml.
