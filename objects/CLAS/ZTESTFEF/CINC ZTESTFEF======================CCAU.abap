@@ -18,7 +18,7 @@ class ltcl_master implementation.
  method check.
   data(structure) = ztestfef=>execute( ).
    cl_abap_unit_assert=>assert_equals( exp = 'welcome to' act = STRUCTURE-key ).
-   cl_abap_unit_assert=>assert_equals( exp = 'Devops world' act = STRUCTURE-value ).
+   cl_abap_unit_assert=>assert_equals( exp = 'The Devops world' act = STRUCTURE-value ).
 
 
  endmethod.
