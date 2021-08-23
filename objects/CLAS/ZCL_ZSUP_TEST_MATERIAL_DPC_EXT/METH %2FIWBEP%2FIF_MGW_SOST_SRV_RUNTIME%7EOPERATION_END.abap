@@ -1,0 +1,7 @@
+  method /IWBEP/IF_MGW_SOST_SRV_RUNTIME~OPERATION_END.
+**TRY.
+*CALL METHOD SUPER->/IWBEP/IF_MGW_SOST_SRV_RUNTIME~OPERATION_END
+*    .
+**  CATCH /iwbep/cx_mgw_tech_exception.
+**ENDTRY.
+  endmethod.
