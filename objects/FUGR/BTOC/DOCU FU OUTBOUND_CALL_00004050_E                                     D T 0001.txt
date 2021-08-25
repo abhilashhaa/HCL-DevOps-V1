@@ -1,4 +1,0 @@
-/: DEFINE &TEXT& = 'Schnittstellen Beschreibung für Event 00004050'        
-/: DEFINE &EVENT& = '00004050'                                             
-/: DEFINE &TYPE& = 'INTERFACE'                                             
-/: INCLUDE FI_OPEN_FI_DOCUMENTATION_1 OBJECT DOKU ID TX                    

@@ -1,5 +1,0 @@
-  METHOD constructor.
-
-    store( ).
-
-  ENDMETHOD.

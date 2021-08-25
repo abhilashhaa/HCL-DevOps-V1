@@ -1,7 +1,0 @@
-CLASS cl_ngc_bil_clf_tp DEFINITION
-  PUBLIC
-  ABSTRACT
-  FINAL
-  FOR BEHAVIOR OF i_clfnobjecttp .
-
-  PUBLIC SECTION.

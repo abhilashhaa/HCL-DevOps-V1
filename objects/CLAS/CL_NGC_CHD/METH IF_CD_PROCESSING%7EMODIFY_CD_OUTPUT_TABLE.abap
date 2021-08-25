@@ -1,2 +1,0 @@
-  method IF_CD_PROCESSING~MODIFY_CD_OUTPUT_TABLE.
-  endmethod.

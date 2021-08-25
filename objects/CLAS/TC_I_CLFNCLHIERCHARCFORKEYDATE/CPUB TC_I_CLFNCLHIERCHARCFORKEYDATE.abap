@@ -1,7 +1,0 @@
-CLASS tc_i_clfnclhiercharcforkeydate DEFINITION
-  PUBLIC
-  FINAL
-  CREATE PUBLIC
-  FOR TESTING .
-
-  PUBLIC SECTION.

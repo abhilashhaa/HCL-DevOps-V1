@@ -1,4 +1,0 @@
-  PROTECTED SECTION.
-
-    METHODS corr_insert
-         REDEFINITION .

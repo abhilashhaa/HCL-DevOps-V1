@@ -1,3 +1,0 @@
-METHOD IF_DRF_OUTBOUND~FINALIZE.
-  CLEAR: ev_delete_change_pointer.
-ENDMETHOD.

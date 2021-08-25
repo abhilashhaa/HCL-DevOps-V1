@@ -1,4 +1,0 @@
-protected section.
-
-  data MO_CLS_PERSISTENCY type ref to IF_NGC_CORE_CLS_PERSISTENCY .
-  data MO_CLF_PERSISTENCY type ref to IF_NGC_CORE_CLF_PERSISTENCY .

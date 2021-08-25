@@ -1,2 +1,0 @@
-  method /BOBF/IF_FRW_DETERMINATION~EXECUTE.
-  endmethod.

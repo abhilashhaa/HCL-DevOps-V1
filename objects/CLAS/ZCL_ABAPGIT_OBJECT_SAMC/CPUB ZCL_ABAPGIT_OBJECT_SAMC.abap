@@ -1,1 +1,0 @@
-CLASS zcl_abapgit_object_samc DEFINITION PUBLIC INHERITING FROM zcl_abapgit_objects_saxx_super FINAL.

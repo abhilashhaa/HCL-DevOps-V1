@@ -1,7 +1,0 @@
-U4 &MEANING&                                                               
-AS Bei Verwendung des Funktionsbausteins innerhalb einer                   
-   eigenprogrammierten Hilfe ist IMMER sy-langu zu übergeben.              
-U4 &RANGE&                                                                 
-AS                                                                         
-U4 &DEFAULT&                                                               
-AS                                                                         

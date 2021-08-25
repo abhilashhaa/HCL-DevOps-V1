@@ -1,3 +1,0 @@
-  PROTECTED SECTION.
-
-    TYPES tt_clf_hdr TYPE STANDARD TABLE OF clf_hdr.

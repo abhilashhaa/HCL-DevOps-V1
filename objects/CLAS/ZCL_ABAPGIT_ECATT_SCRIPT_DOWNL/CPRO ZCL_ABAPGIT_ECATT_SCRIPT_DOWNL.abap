@@ -1,3 +1,0 @@
-  PROTECTED SECTION.
-    METHODS:
-      download_data REDEFINITION.

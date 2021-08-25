@@ -1,8 +1,0 @@
-CLASS tc_i_clfnobjectcharcvalue DEFINITION
-  PUBLIC
-  ABSTRACT
-  FINAL
-  CREATE PUBLIC
-  FOR TESTING .
-
-  PUBLIC SECTION.

@@ -1,6 +1,0 @@
-U1 &MEANING&                                                               
-AS Long text for a message.                                                
-AS Each parameter row has a maximum length of 255 bytes.                   
-U1 &RANGE&                                                                 
-AS                                                                         
-U1 &DEFAULT&                                                               

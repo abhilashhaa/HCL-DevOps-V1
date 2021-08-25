@@ -1,3 +1,0 @@
-  METHOD teardown.
-
-  ENDMETHOD.

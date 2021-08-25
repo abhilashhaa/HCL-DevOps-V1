@@ -1,7 +1,0 @@
-U1 Definition                                                              
-AS    1. Lieferavis zur Bestellung                                         
-AS                                                                         
-AS    2. Schnittstelle:                                                    
-AS                      tables                                             
-/                           t_xekes                                        
-AS                          t_yekes                                        

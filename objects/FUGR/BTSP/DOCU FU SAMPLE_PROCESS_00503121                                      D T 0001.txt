@@ -1,8 +1,0 @@
-U1 &FUNCTIONALITY&                                                         
-AS                                                                         
-U1 &EXAMPLE&                                                               
-AS                                                                         
-U1 &HINTS&                                                                 
-AS                                                                         
-U1 &FURTHER_SOURCES_OF_INF&                                                
-AS                                                                         

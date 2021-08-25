@@ -1,8 +1,0 @@
-U4 &MEANING&                                                               
-AS Funktionsbausteine mit Namen 'XXXX_OBJECT_SHOW' werden über             
-   einenDispatcher aufgerufen. Parameter ist zur Einhaltung der            
-   Schnittstelle vorhanden.                                                
-U4 &RANGE&                                                                 
-AS                                                                         
-U4 &DEFAULT&                                                               
-AS                                                                         

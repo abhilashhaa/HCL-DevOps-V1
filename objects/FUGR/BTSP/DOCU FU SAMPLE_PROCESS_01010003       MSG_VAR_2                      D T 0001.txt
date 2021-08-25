@@ -1,6 +1,0 @@
-U4 &MEANING&                                                               
-AS Wert, durch den das zweite '&' einer Nachricht ersetzt werden soll.     
-U4 &RANGE&                                                                 
-AS                                                                         
-U4 &DEFAULT&                                                               
-AS                                                                         

@@ -1,7 +1,0 @@
-"! @testing I_ClfnClassVH
-CLASS ltc_i_clfnclassvh DEFINITION
-  INHERITING FROM tc_i_clfnclassvh
-  FOR TESTING
-  DURATION SHORT
-  RISK LEVEL HARMLESS.
-ENDCLASS.

@@ -1,6 +1,0 @@
-  METHOD get_service_name.
-*CALL METHOD SUPER->GET_SERVICE_NAME
-*  RECEIVING
-    rv_service_name = '/SAP/API_CLFN_CHARACTERISTIC_SRV;v=1'.
-*    .
-  ENDMETHOD.

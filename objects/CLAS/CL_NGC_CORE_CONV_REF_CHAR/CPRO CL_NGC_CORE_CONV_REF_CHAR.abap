@@ -1,9 +1,0 @@
-protected section.
-
-  data MV_APPL_NAME type IF_SHDB_PFW_DEF=>TV_PFW_APPL_NAME .
-  data MV_LANGUAGE like SY-LANGU .
-  data MV_REWORK type BOOLE_D .
-  data MV_REFBO_NAME type VIEWNAME .
-  data MT_EVENT_COUNT type LTT_EVENT_COUNT .
-  data MT_CLSTYPE_ECH type LTT_CLSTYPE_ECH .
-  data MO_REFVAL_READER type ref to LCL_REFVAL_READER_GENERAL .

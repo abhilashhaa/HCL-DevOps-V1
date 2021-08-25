@@ -1,9 +1,0 @@
-U1 &CAUSE&                                                                 
-AS                                                                         
-U1 &SYSTEM_RESPONSE&                                                       
-AS Die Konvertierung des aktuellen Pakets wird abgebrochen.                
-U1 &WHAT_TO_DO&                                                            
-AS Der SAP-Support sollte kontaktiert werden, damit er das Problem behebt. 
-   Anschließend sollten Sie die Umsetzung erneut ausführen.                
-U1 &SYS_ADMIN&                                                             
-AS                                                                         

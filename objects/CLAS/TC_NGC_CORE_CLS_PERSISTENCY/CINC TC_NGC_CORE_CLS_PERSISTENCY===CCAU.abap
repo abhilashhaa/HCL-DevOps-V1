@@ -1,7 +1,0 @@
-CLASS ltc_ngc_core_cls_persistency DEFINITION
-  FOR TESTING
-  DURATION SHORT
-  RISK LEVEL HARMLESS
-  FINAL
-  INHERITING FROM tc_ngc_core_cls_persistency.
-ENDCLASS.

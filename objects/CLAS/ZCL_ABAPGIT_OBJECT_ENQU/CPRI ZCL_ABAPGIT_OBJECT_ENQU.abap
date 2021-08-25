@@ -1,3 +1,0 @@
-  PRIVATE SECTION.
-    TYPES: tyt_dd27p TYPE STANDARD TABLE OF dd27p WITH DEFAULT KEY.
-    METHODS _clear_dd27p_fields CHANGING ct_dd27p TYPE tyt_dd27p.

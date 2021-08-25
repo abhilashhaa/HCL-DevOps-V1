@@ -1,3 +1,0 @@
-  PRIVATE SECTION.
-    METHODS:
-      setup.

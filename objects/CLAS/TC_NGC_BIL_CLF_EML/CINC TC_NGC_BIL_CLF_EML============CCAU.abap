@@ -1,7 +1,0 @@
-"! @testing BDEF:I_ClfnObjectTP
-CLASS ltc_ngc_bil_clf_eml DEFINITION FOR TESTING
-  DURATION MEDIUM
-  RISK LEVEL DANGEROUS
-  INHERITING FROM tc_ngc_bil_clf_eml
-  FINAL.
-ENDCLASS.

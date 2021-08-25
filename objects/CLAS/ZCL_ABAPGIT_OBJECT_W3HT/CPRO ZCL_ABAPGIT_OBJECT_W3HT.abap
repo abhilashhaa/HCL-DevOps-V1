@@ -1,2 +1,0 @@
-  PROTECTED SECTION.
-    METHODS: change_bdc_jump_data REDEFINITION.
