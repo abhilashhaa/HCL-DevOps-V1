@@ -69,7 +69,7 @@ CLASS lcl_mat IMPLEMENTATION.
     APPEND lw TO li_mat.
 
 
-    cl_aunit_assert=>assert_equals(
+    cl_abap_unit_assert=>assert_equals(
     exp = li_mat
     act = li_find
     msg = 'Incorrect Material Details'
