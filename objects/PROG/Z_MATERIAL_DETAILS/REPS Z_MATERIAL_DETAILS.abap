@@ -24,7 +24,7 @@ ENDCLASS.
 
 CLASS lcl_main IMPLEMENTATION.
   METHOD lm_matnr_werks.
-    DATA: lv_matnr TYPE matnr VALUE 'RM02',
+    DATA: lv_matnr TYPE matnr VALUE 'RM04',
           lv_werks TYPE werks_d VALUE '1110'.
     SELECT matnr,
       werks FROM marc
@@ -44,7 +44,7 @@ ENDCLASS.
 CLASS lcl_mat IMPLEMENTATION.
   METHOD lm_matnr_werks.
     DATA: o_cut TYPE REF TO lcl_main.
-    DATA: lv_matnr TYPE matnr VALUE 'RM02',
+    DATA: lv_matnr TYPE matnr VALUE 'RM04',
           lv_werks TYPE werks_d VALUE '1110'.
     TYPES: BEGIN OF ty_check1,
              matnr TYPE matnr,
