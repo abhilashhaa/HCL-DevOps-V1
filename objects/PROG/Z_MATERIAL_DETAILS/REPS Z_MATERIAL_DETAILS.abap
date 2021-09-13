@@ -20,6 +20,8 @@ CLASS lcl_main DEFINITION.
 
     METHODS: lm_matnr_werks
       CHANGING li_mat TYPE tt_mat.
+
+
 ENDCLASS.
 
 CLASS lcl_main IMPLEMENTATION.
@@ -39,6 +41,9 @@ CLASS lcl_mat DEFINITION FOR TESTING.
   "#AU Duration Short
   PUBLIC SECTION.
     METHODS: lm_matnr_werks FOR TESTING.
+  PRIVATE SECTION.
+    METHODS: setup.
+    METHODS: teardown.
 ENDCLASS.
 
 CLASS lcl_mat IMPLEMENTATION.
@@ -58,14 +63,22 @@ CLASS lcl_mat IMPLEMENTATION.
     o_cut->lm_matnr_werks( CHANGING li_mat = li_find ).
 
     DATA: lw TYPE ty_check1.
+    clear: li_mat.
     lw-matnr = lv_matnr.
     lw-werks = lv_werks.
     APPEND lw TO li_mat.
+
 
     cl_aunit_assert=>assert_equals(
     exp = li_mat
     act = li_find
     msg = 'Incorrect Material Details'
     ).
+  ENDMETHOD.
+
+  METHOD setup.
+  ENDMETHOD.
+
+  METHOD teardown.
   ENDMETHOD.
 ENDCLASS.
