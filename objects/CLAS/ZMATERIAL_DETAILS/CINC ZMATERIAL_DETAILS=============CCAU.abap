@@ -26,6 +26,7 @@ CLASS lcl_mat IMPLEMENTATION.
     zmaterial_details=>matnr_werks( CHANGING li_mat = li_find ).
 
     DATA: lw TYPE ty_check1.
+*    **Comment
     CLEAR: li_mat.
     lw-matnr = lv_matnr.
     lw-werks = lv_werks.
