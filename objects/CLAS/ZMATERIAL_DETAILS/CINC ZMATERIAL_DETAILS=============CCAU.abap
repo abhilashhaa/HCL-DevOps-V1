@@ -27,7 +27,7 @@ CLASS lcl_mat IMPLEMENTATION.
 
     DATA: lw TYPE ty_check1.
 *    **Comment
-    CLEAR: li_mat.
+*    CLEAR: li_mat.
     lw-matnr = lv_matnr.
     lw-werks = lv_werks.
     APPEND lw TO li_mat.
