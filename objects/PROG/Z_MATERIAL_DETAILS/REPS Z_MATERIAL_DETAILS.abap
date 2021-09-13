@@ -36,9 +36,9 @@ CLASS lcl_main IMPLEMENTATION.
   ENDMETHOD.
 ENDCLASS.
 
-CLASS lcl_mat DEFINITION FOR TESTING.
-  "#AU Risk_Level Harmless
-  "#AU Duration Short
+CLASS lcl_mat DEFINITION FOR TESTING
+  risk level harmless
+  duration short.
   PUBLIC SECTION.
     METHODS: lm_matnr_werks FOR TESTING.
   PRIVATE SECTION.
@@ -63,7 +63,7 @@ CLASS lcl_mat IMPLEMENTATION.
     o_cut->lm_matnr_werks( CHANGING li_mat = li_find ).
 
     DATA: lw TYPE ty_check1.
-*    clear: li_mat.
+*    CLEAR: li_mat.
     lw-matnr = lv_matnr.
     lw-werks = lv_werks.
     APPEND lw TO li_mat.
