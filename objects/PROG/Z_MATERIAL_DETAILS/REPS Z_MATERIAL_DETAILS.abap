@@ -63,7 +63,7 @@ CLASS lcl_mat IMPLEMENTATION.
     o_cut->lm_matnr_werks( CHANGING li_mat = li_find ).
 
     DATA: lw TYPE ty_check1.
-    clear: li_mat.
+*    clear: li_mat.
     lw-matnr = lv_matnr.
     lw-werks = lv_werks.
     APPEND lw TO li_mat.
