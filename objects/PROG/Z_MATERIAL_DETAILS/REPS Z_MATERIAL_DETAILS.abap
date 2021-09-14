@@ -50,7 +50,7 @@ CLASS lcl_mat IMPLEMENTATION.
   METHOD lm_matnr_werks.
     DATA: o_cut TYPE REF TO lcl_main.
     DATA: lv_matnr TYPE matnr VALUE 'RM04',
-          lv_werks TYPE werks_d VALUE '1110'.
+          lv_werks TYPE werks_d VALUE '1111'.
     TYPES: BEGIN OF ty_check1,
              matnr TYPE matnr,
              werks TYPE werks_d,
