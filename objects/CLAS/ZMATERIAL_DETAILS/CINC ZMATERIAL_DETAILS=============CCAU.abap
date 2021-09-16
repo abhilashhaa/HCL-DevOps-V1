@@ -1,36 +1,36 @@
 *"* use this source file for your ABAP unit test classes
-CLASS lcl_mat DEFINITION FOR TESTING.
+class lcl_mat definition for testing.
   "#AU Risk_Level Harmless
   "#AU Duration Short
-  PUBLIC SECTION.
-    METHODS: matnr_werks FOR TESTING.
-  PRIVATE SECTION.
-    METHODS: setup.
-    METHODS: teardown.
-ENDCLASS.
+  public section.
+    methods: matnr_werks for testing.
+  private section.
+    methods: setup.
+    methods: teardown.
+endclass.
 
-CLASS lcl_mat IMPLEMENTATION.
-  METHOD matnr_werks.
+class lcl_mat implementation.
+  method matnr_werks.
 *    DATA: o_cut TYPE REF TO lcl_main.
-    DATA: lv_matnr TYPE matnr VALUE 'RM04',
-          lv_werks TYPE werks_d VALUE '1111'.
-    TYPES: BEGIN OF ty_check1,
-             matnr TYPE matnr,
-             werks TYPE werks_d,
-           END OF ty_check1.
+    data: lv_matnr type matnr value 'RM04',
+          lv_werks type werks_d value '1111'.
+    types: begin of ty_check1,
+             matnr type matnr,
+             werks type werks_d,
+           end of ty_check1.
 
-    DATA : li_find TYPE STANDARD TABLE OF ty_check1,
-           li_mat  TYPE STANDARD TABLE OF ty_check1.
-
-*    CREATE OBJECT o_cut.
-    zmaterial_details=>matnr_werks( CHANGING li_mat = li_find ).
-
-    DATA: lw TYPE ty_check1.
+    data : li_find type standard table of ty_check1,
+           li_mat  type standard table of ty_check1.
+*
+**    CREATE OBJECT o_cut.
+    zmaterial_details=>matnr_werks( changing li_mat = li_find ).
+*
+    data: lw type ty_check1.
 *    **Comment
-    CLEAR: li_mat.
+*    CLEAR: li_mat.
     lw-matnr = lv_matnr.
     lw-werks = lv_werks.
-    APPEND lw TO li_mat.
+    append lw to li_MAT.
 
 
     cl_abap_unit_assert=>assert_equals(
@@ -38,11 +38,11 @@ CLASS lcl_mat IMPLEMENTATION.
     act = li_find
     msg = 'Incorrect Material Details'
     ).
-  ENDMETHOD.
+  endmethod.
 
-  METHOD setup.
-  ENDMETHOD.
+  method setup.
+  endmethod.
 
-  METHOD teardown.
-  ENDMETHOD.
-ENDCLASS.
+  method teardown.
+  endmethod.
+endclass.
