@@ -7,4 +7,5 @@
       AND werks = @lv_werks
       INTO TABLE @li_mat.
 
-  endmethod.
+ "#EC CI_VALPAR
+ endmethod .
