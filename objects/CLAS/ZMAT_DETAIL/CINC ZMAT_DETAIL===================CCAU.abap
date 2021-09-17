@@ -1,5 +1,5 @@
 *"* use this source file for your ABAP unit test classes
-class ltcl_master definition for testing
+class ltcl_matnr definition for testing
  risk level harmless
  duration short.
 
@@ -13,7 +13,7 @@ class ltcl_master definition for testing
 
 endclass.
 
-class ltcl_master implementation.
+class ltcl_matnr implementation.
  method check.
   data(structure) = zcl_testlosc=>execute( ).
    cl_abap_unit_assert=>assert_equals( exp = 'welcome to' act = STRUCTURE-key ).
