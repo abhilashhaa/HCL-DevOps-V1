@@ -116,8 +116,8 @@ CLASS ltc_PURCHASE_ORDER_DETAILS DEFINITION FOR TESTING RISK LEVEL HARMLESS DURA
     METHODS teardown.
 
     METHODS _01_disp_hdr_alv_pass FOR TESTING.
-    METHODS _02_disp_itm_alv_pass FOR TESTING.
-*    METHODS _03_disp_hdr_alv_fail_no_data FOR TESTING.
+*    METHODS _02_disp_itm_alv_pass FOR TESTING.
+    METHODS _03_disp_hdr_alv_fail_no_data FOR TESTING.
 *    METHODS _04_disp_itm_alv_fail_no_data FOR TESTING.
 
     DATA: mt_ekko TYPE STANDARD TABLE OF ekko,
@@ -188,49 +188,48 @@ CLASS ltc_PURCHASE_ORDER_DETAILS IMPLEMENTATION.
 
   ENDMETHOD.
 
-  METHOD _02_disp_itm_alv_pass.
-
-    DATA: lt_purdoc_itm_exp TYPE TABLE OF ty_purdoc_itm.
-
-    lt_purdoc_itm_exp = VALUE #(
-        ( ebeln = '1234567890' ebelp = '0010' matnr = ' MATERIAL_01'  menge = '500' meins = 'PC' netwr = 5000 brtwr = 6000 )
-( ebeln = '1234567890' ebelp = '0020' matnr = ' MATERIAL_02'  menge = '400' meins = 'KG' netwr = 6000 brtwr = 7000 )
-( ebeln = '1234567890' ebelp = '0030' matnr = ' MATERIAL_03'  menge = '300' meins = 'PC' netwr = 7000 brtwr = 8000 )
-).
-
-    p_ebeln = '1234567890'.
-    p_hdr = abap_false.
-    p_itm = abap_true.
-
-    PERFORM disp_purdoc_alv USING p_ebeln  p_hdr p_itm.
-
-    cl_abap_unit_assert=>assert_equals(
-    EXPORTING
-      act = lt_purdoc_itm
-      exp = lt_purdoc_itm_exp ).
-
-    cl_abap_unit_assert=>assert_initial( lv_msg ).
-
-  ENDMETHOD.
-
-*  METHOD _03_disp_hdr_alv_fail_no_data.
+*  METHOD _02_disp_itm_alv_pass.
 *
-*    DATA: lv_msg_exp TYPE string VALUE 'Purchase document not found'.
+*    DATA: lt_purdoc_itm_exp TYPE TABLE OF ty_purdoc_itm.
 *
-*    p_ebeln =   '8921000042'.
-*    p_hdr = abap_true.
-*    p_itm = abap_false.
+*    lt_purdoc_itm_exp = VALUE #(
+*        ( ebeln = '1234567891' ebelp = '0010' matnr = ' MATERIAL_01'  menge = '500' meins = 'PC' netwr = 5000 brtwr = 6000 )
+*( ebeln = '1234567891' ebelp = '0020' matnr = ' MATERIAL_02'  menge = '400' meins = 'KG' netwr = 6000 brtwr = 7000 )
+*( ebeln = '1234567891' ebelp = '0030' matnr = ' MATERIAL_03'  menge = '300' meins = 'PC' netwr = 7000 brtwr = 8000 )
+*).
 *
-*    PERFORM disp_purdoc_alv USING p_ebeln p_hdr p_itm.
+*    p_ebeln = '1234567890'.
+*    p_hdr = abap_false.
+*    p_itm = abap_true.
+*
+*    PERFORM disp_purdoc_alv USING p_ebeln  p_hdr p_itm.
 *
 *    cl_abap_unit_assert=>assert_equals(
 *    EXPORTING
-*      act = lv_msg
-*      exp = lv_msg_exp ).
+*      act = lt_purdoc_itm
+*      exp = lt_purdoc_itm_exp ).
 *
-*    cl_abap_unit_assert=>assert_initial( lt_purdoc_hdr ).
-
+*    cl_abap_unit_assert=>assert_initial( lv_msg ).
+*
 *  ENDMETHOD.
+
+  METHOD _03_disp_hdr_alv_fail_no_data.
+
+    DATA: lv_msg_exp TYPE string VALUE 'Purchase document not found'.
+    p_ebeln =   '8921000042'.
+    p_hdr = abap_true.
+    p_itm = abap_false.
+
+    PERFORM disp_purdoc_alv USING p_ebeln p_hdr p_itm.
+
+    cl_abap_unit_assert=>assert_equals(
+    EXPORTING
+      act = lv_msg
+      exp = lv_msg_exp ).
+
+    cl_abap_unit_assert=>assert_initial( lt_purdoc_hdr ).
+
+  ENDMETHOD.
 *
 *  METHOD _04_disp_itm_alv_fail_no_data.
 *
