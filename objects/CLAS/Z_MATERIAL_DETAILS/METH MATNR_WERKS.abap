@@ -1,6 +1,6 @@
   method MATNR_WERKS.
         DATA: lv_matnr TYPE matnr VALUE 'RM02',
-          lv_werks TYPE werks_d VALUE '1110'.
+          lv_werks TYPE werks_d VALUE '1111'.
     SELECT matnr,
       werks FROM marc
       WHERE matnr = @lv_matnr
