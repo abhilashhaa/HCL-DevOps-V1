@@ -1,4 +1,4 @@
  method execute.
  data-key = 'welcome to'.
- data-value = 'The SAPDemo DevOps world'.
+ data-value = 'The SAP Demo DevOps world'.
  endmethod.
