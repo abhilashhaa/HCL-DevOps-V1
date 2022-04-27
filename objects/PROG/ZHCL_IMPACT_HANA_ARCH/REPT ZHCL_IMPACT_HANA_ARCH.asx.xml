@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?><asx:abap xmlns:asx="http://www.sap.com/abapxml">
+<asx:values>
+<TEXTPOOLT>
+<TEXTPOOLT>
+<ID>I</ID>
+<KEY>001</KEY>
+<LANG>E</LANG>
+<ENTRY>Object Type</ENTRY>
+<LENGTH>11</LENGTH>
+</TEXTPOOLT>
+<TEXTPOOLT>
+<ID>I</ID>
+<KEY>002</KEY>
+<LANG>E</LANG>
+<ENTRY>Program</ENTRY>
+<LENGTH>7</LENGTH>
+</TEXTPOOLT>
+<TEXTPOOLT>
+<ID>I</ID>
+<KEY>003</KEY>
+<LANG>E</LANG>
+<ENTRY>Function Group</ENTRY>
+<LENGTH>14</LENGTH>
+</TEXTPOOLT>
+<TEXTPOOLT>
+<ID>I</ID>
+<KEY>004</KEY>
+<LANG>E</LANG>
+<ENTRY>Function Module</ENTRY>
+<LENGTH>15</LENGTH>
+</TEXTPOOLT>
+<TEXTPOOLT>
+<ID>I</ID>
+<KEY>005</KEY>
+<LANG>E</LANG>
+<ENTRY>Class</ENTRY>
+<LENGTH>5</LENGTH>
+</TEXTPOOLT>
+<TEXTPOOLT>
+<ID>I</ID>
+<KEY>010</KEY>
+<LANG>E</LANG>
+<ENTRY>Method name</ENTRY>
+<LENGTH>11</LENGTH>
+</TEXTPOOLT>
+<TEXTPOOLT>
+<ID>R</ID>
+<KEY></KEY>
+<LANG>E</LANG>
+<ENTRY>Impact of Change in HANA architecture</ENTRY>
+<LENGTH>37</LENGTH>
+</TEXTPOOLT>
+<TEXTPOOLT>
+<ID>S</ID>
+<KEY>S_OBJNAM</KEY>
+<LANG>E</LANG>
+<ENTRY>        Object name</ENTRY>
+<LENGTH>19</LENGTH>
+</TEXTPOOLT>
+</TEXTPOOLT>
+</asx:values>
+</asx:abap>
