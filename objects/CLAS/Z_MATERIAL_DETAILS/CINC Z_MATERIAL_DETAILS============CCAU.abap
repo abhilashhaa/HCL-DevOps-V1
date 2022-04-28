@@ -12,8 +12,8 @@ endclass.
 class lcl_mat implementation.
   method matnr_werks.
 *    DATA: o_cut TYPE REF TO lcl_main.
-    data: lv_matnr type matnr value 'RM02',
-          lv_werks type werks_d value '1100'.
+    data: lv_matnr type matnr value 'RM04',
+          lv_werks type werks_d value '1110'.
     types: begin of ty_check1,
              matnr type matnr,
              werks type werks_d,
