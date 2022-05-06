@@ -9,7 +9,7 @@ stage('Prepare')
   stage('DeployCommit') 
     gctsDeploy(
   script: this,
-  host: 'https://hclutl1909.hcldigilabs.com:8001',
+  host: 'https://hclutl1909.hcldigilabs.com:8001/sap/bc/ui2/flp?sap-client=200&sap-language=EN#Repository-manage&/repository/hcl-devops-v',
   abapCredentialsId: 'ABAPUserPasswordCredentialsId',
   repository: 'HCL-DevOps-V',
   remoteRepositoryURL: "https://github.com/abhilashhaa/HCL-DevOps-V1.git",
