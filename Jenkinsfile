@@ -9,7 +9,7 @@ stage('Prepare')
   stage('DeployCommit') 
     gctsDeploy(
   script: this,
-  host: 'https://hclutl1909.hcldigilabs.com:8001',
+  host: 'http://hclutl1909.hcldigilabs.com:8001',
   client: '200',
   abapCredentialsId: 'ABAPUserPasswordCredentialsId',
   repository: 'HCL-DevOps-V',
