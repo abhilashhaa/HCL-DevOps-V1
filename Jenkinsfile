@@ -10,6 +10,7 @@ stage('Prepare')
     gctsDeploy(
   script: this,
   host: 'https://hclutl1909.hcldigilabs.com:8001',
+  client: '200',
   abapCredentialsId: 'ABAPUserPasswordCredentialsId',
   repository: 'HCL-DevOps-V',
   remoteRepositoryURL: "https://github.com/abhilashhaa/HCL-DevOps-V1.git",
