@@ -6,17 +6,6 @@ node()
 stage('Prepare')	
 	checkout scm
 	
-	Stage('CreateRepo')
-	gctsCreateRepository(
-  script: this,
-  host: 'http://hclutl1909.hcldigilabs.com:8001',
-  client: '200',
-  abapCredentialsId: 'ABAPUserPasswordCredentialsId',
-  repository: 'myrepo',
-  remoteRepositoryURL: 'https://github.com/abhilashhaa/HCL-DevOps-V1.git',
-  role: 'TARGET',
-  vSID: 'FEF'
-  )
 	
   stage('DeployCommit') 
     gctsDeploy(
