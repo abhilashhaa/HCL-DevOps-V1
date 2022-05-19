@@ -6,18 +6,16 @@ node()
 stage('Prepare')	
 	checkout scm
 	
-	
   stage('DeployCommit') 
     gctsDeploy(
   script: this,
-  host: 'http://hclutl1909.hcldigilabs.com:8001',
-  client: '200',
+  host: 'https://hclutl1909.hcldigilabs.com:8001',
   abapCredentialsId: 'ABAPUserPasswordCredentialsId',
   repository: 'HCL-DevOps-V',
   remoteRepositoryURL: "https://github.com/abhilashhaa/HCL-DevOps-V1.git",
   role: 'TARGET',
-  
-  
+  vSID: 'FEF',
+  rollback: 'false'
 	    )
 	      
 	
@@ -67,5 +65,4 @@ echo "RESULT: ${currentBuild.result}"
 	
 
 }
-
 
