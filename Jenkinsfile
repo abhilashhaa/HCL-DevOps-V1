@@ -16,8 +16,7 @@ stage('Prepare')
   repository: 'HCL-DevOps-V',
   remoteRepositoryURL: "https://github.com/abhilashhaa/HCL-DevOps-V1.git",
   role: 'TARGET',
-  vSID: 'FEF',
-  rollback: 'false'
+  
   
 	    )
 	      
